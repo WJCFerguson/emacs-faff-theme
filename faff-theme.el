@@ -97,7 +97,7 @@
  '(dired-directory ((t (:inherit font-lock-keyword-face))))
  '(dired-filetype-compress ((t (:foreground "Orchid"))))
  '(dired-filetype-execute ((t (:foreground "green4" :weight bold))))
- '(dired-filetype-omit ((t (:foreground "gray70"))))
+ '(dired-filetype-omit ((t (:foreground "gray50"))))
  '(dired-filetype-source ((t (:foreground "red4" :weight bold))))
  '(flymake-warnline ((t (:background "LightBlue3"))))
  '(highlight-indentation-face ((t (:inherit fringe :background "ivory3"))))
