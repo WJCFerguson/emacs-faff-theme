@@ -130,6 +130,8 @@
  '(outline-4 ((t (:inherit font-lock-variable-name-face))))
  '(powerline-active1 ((t (:inherit mode-line :background "gold4"))))
  '(powerline-active2 ((t (:inherit mode-line :background "gold3"))))
+ '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "grey11" :foreground "grey45"))))
+ '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "grey20" :foreground "grey55"))))
  '(scroll-bar ((t (:background "grey90"))))
  '(tool-bar ((default (:foreground "black" :box (:line-width 1 :style released-button))) (((type x w32 mac) (class color)) (:background "grey92"))))
  '(warning ((t (:foreground "DarkOrange3" :weight bold)))))
