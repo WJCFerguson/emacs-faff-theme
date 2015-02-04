@@ -12,6 +12,7 @@ Tweaked mostly for:
 
 * coding
 * magit
+* helm
 * diff
 * dired
 * powerline,
