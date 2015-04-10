@@ -114,7 +114,7 @@
  '(helm-ff-executable ((t (:foreground "darkgreen" :weight bold))))
  '(helm-ff-symlink ((t (:foreground "orange4"))))
  '(helm-grep-lineno ((t (:foreground "orange4"))))
- '(helm-source-header ((t (:background "ivory2" :foreground "black" :box (:line-width 2 :color "grey75" :style released-button) :weight normal :height 1.0))))
+ '(helm-source-header ((t (:background "ivory2" :foreground "black" :box (:line-width 1 :color "grey75" :style pressed-button) :weight normal :height 1.0 :family "Sans Serif"))))
  '(magit-branch ((t (:inherit magit-header :background "yellow" :box (:line-width 1 :color "grey75" :style released-button)))))
  '(magit-diff-add ((t (:inherit diff-added))))
  '(magit-diff-del ((t (:inherit diff-removed))))
