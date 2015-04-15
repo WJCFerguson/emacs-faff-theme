@@ -138,6 +138,7 @@
  '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "grey11" :foreground "grey45"))))
  '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "grey20" :foreground "grey55"))))
  '(scroll-bar ((t (:background "grey90"))))
+ '(sh-heredoc ((t (:foreground "tan4"))))
  '(success ((t (:foreground "darkgreen" :weight bold))))
  '(tool-bar ((default (:foreground "black" :box (:line-width 1 :style released-button))) (((type x w32 mac) (class color)) (:background "grey92"))))
  '(warning ((t (:foreground "DarkOrange3" :weight bold)))))
