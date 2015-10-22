@@ -102,6 +102,7 @@
  '(dired-filetype-execute ((t (:foreground "green4" :weight bold))))
  '(dired-filetype-omit ((t (:foreground "gray50"))))
  '(dired-filetype-source ((t (:foreground "red4" :weight bold))))
+ '(dired-filetype-video ((t (:foreground "brown"))))
  '(flymake-warnline ((t (:background "LightBlue3"))))
  '(highlight-indentation-face ((t (:inherit fringe :background "ivory3"))))
  '(hl-line ((t (:background "ivory2"))))
