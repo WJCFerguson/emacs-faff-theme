@@ -78,6 +78,7 @@
  '(ein:cell-input-area ((t (:background "ivory2"))) t)
  '(fringe ((t (:inherit default :background "ivory3"))))
  '(header-line ((default (:inherit (mode-line))) (((type tty)) (:underline (:color foreground-color :style line) :inverse-video nil)) (((class color grayscale) (background light)) (:box nil :foreground "grey20" :background "grey90")) (((class color grayscale) (background dark)) (:box nil :foreground "grey90" :background "grey20")) (((class mono) (background light)) (:underline (:color foreground-color :style line) :box nil :inverse-video nil :foreground "black" :background "white")) (((class mono) (background dark)) (:underline (:color foreground-color :style line) :box nil :inverse-video nil :foreground "white" :background "black"))))
+ '(js2-external-variable ((t (:foreground "orange3"))))
  '(tooltip ((((class color)) (:inherit (variable-pitch) :foreground "black" :background "lightyellow")) (t (:inherit (variable-pitch)))))
  '(mode-line ((t (:background "gold" :foreground "black" :box nil))))
  '(mode-line-buffer-id ((t (:weight bold))))
