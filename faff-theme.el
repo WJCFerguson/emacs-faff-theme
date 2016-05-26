@@ -102,6 +102,7 @@
  '(dired-filetype-compress ((t (:foreground "Orchid"))))
  '(dired-filetype-execute ((t (:foreground "green4" :weight bold))))
  '(dired-filetype-omit ((t (:foreground "gray50"))))
+ '(dired-filetype-plain ((t (:foreground "SeaGreen"))))
  '(dired-filetype-source ((t (:foreground "red4" :weight bold))))
  '(dired-filetype-video ((t (:foreground "brown"))))
  '(flymake-warnline ((t (:background "LightBlue3"))))
