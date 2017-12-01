@@ -45,6 +45,7 @@
 (custom-theme-set-faces
  'faff
  '(default ((t (:foreground "black" :background "ivory3"))))
+ '(match ((t (:background "yellow2"))))
  '(cursor ((t (:background "red3"))))
  '(fixed-pitch ((t (:family "Monospace"))))
  '(variable-pitch ((t (:family "Sans Serif"))))
