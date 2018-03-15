@@ -92,7 +92,7 @@
  '(next-error ((t (:inherit (region)))))
  '(query-replace ((t (:inherit (isearch)))))
  '(aw-leading-char-face ((t (:foreground "red" :height 4.0))))
- '(aw-mode-line-face ((t (:inherit mode-line-buffer-id :inverse-video t))))
+ '(aw-mode-line-face ((t (:background "green1" :inverse-video t))))
  '(calendar-today ((t (:background "yellow1" :underline t))))
  '(custom-button ((((type x w32 mac) (class color)) (:background "grey85" :foreground "black" :box (:line-width 1 :style released-button)))))
  '(diff-added ((t (:inherit diff-changed :foreground "green3"))))
