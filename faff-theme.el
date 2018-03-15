@@ -61,7 +61,7 @@
  '(font-lock-comment-delimiter-face ((default (:inherit (font-lock-comment-face)))))
  '(font-lock-comment-face ((t (:foreground "#b00"))))
  '(font-lock-constant-face ((t (:foreground "blue3"))))
- '(font-lock-doc-face ((t (:inherit font-lock-comment-face))))
+ '(font-lock-doc-face ((t (:foreground "red4"))))
  '(font-lock-function-name-face ((((class color) (min-colors 88) (background light)) (:foreground "Blue4"))))
  '(font-lock-keyword-face ((t (:foreground "black" :weight bold))))
  '(font-lock-negation-char-face ((t nil)))
