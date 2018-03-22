@@ -4,7 +4,7 @@
 
 ;; Author: James Ferguson <(concat "wjcferguson" at-sign "gmail.com")>
 ;; URL: https://github.com/WJCFerguson/emacs-faff-theme
-;; Version: 20180321.11:00
+;; Version: 2.0
 ;; Keywords: color theme
 
 ;; This file is not part of GNU Emacs.
