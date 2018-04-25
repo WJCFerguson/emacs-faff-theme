@@ -162,6 +162,9 @@
  '(sh-heredoc ((t (:foreground "tan4"))))
  '(success ((t (:foreground "darkgreen" :weight bold))))
  '(tool-bar ((default (:foreground "black" :box (:line-width 1 :style released-button))) (((type x w32 mac) (class color)) (:background "grey92"))))
+ '(web-mode-doctype-face ((t (:foreground "Grey35"))))
+ '(web-mode-html-attr-name-face ((t (:foreground "gray10"))))
+ '(web-mode-html-tag-face ((t (:weight bold))))
  '(warning ((t (:foreground "DarkOrange3" :weight bold)))))
 
 ;;;###autoload
