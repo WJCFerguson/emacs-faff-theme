@@ -8,15 +8,20 @@ The font here is the beautiful Ubuntu Mono.
 
 ![Screenshot](https://github.com/WJCFerguson/emacs-faff-theme/raw/master/faff-theme.png)
 
-Tweaked mostly for:
+Packages and areas that have therefore had some attention:
 
-* coding
+* general font-lock faces for coding (mostly in Py, C, JS)
+* web-mode
+* ivy, counsel, ace-window
 * magit
-* helm
 * diff
 * dired
 * powerline,
-* hl-line
 * org / outline
+* hl-line
+* whitespace highlighting
+* emms
+* erc
+* treemacs
 
 Comments, suggestions and pull requests welcome
