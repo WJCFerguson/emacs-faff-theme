@@ -1,7 +1,7 @@
 emacs-faff-theme
 ================
 
-Emacs Faff Theme - a light theme based on the Emacs default on an ivory3
+Emacs Faff Theme - a light theme based on the Emacs default on an cornsilk3
 background, with many tweaks on top.
 
 The font here is the beautiful Ubuntu Mono.

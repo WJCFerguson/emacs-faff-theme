@@ -1,4 +1,4 @@
-;;; faff-theme.el --- Light Emacs color theme on ivory3 background
+;;; faff-theme.el --- Light Emacs color theme on cornsilk3 background
 
 ;; Copyright (C) 2003-2014 Free Software Foundation, Inc.
 
@@ -24,7 +24,7 @@
 
 ;;; Commentary:
 ;;
-;; The default Emacs theme with an ivory3 background, with tweaks applied.  Used
+;; The default Emacs theme with an cornsilk3 background, with tweaks applied.  Used
 ;; mostly for coding and magit, with some customizations for org, powerline,
 ;; hl-line
 ;;
@@ -40,25 +40,25 @@
 ;;; Code:
 
 (deftheme faff
-  "Emacs default with ivory3 background and a few tweaks")
+  "Emacs default with cornsilk3 background and a few tweaks")
 
 (custom-theme-set-faces
  'faff
- '(default ((t (:foreground "black" :background "ivory3"))))
+ '(default ((t (:foreground "black" :background "cornsilk3"))))
  '(match ((t (:background "yellow2"))))
  '(cursor ((t (:background "red3"))))
- '(fixed-pitch ((t (:inherit default :background "ivory2"))))
+ '(fixed-pitch ((t (:inherit default :background "cornsilk2"))))
  '(variable-pitch ((t (:family "Sans Serif"))))
  '(escape-glyph ((((background dark)) (:foreground "cyan")) (((type pc)) (:foreground "magenta")) (t (:foreground "brown"))))
  '(minibuffer-prompt ((((background dark)) (:foreground "cyan")) (((type pc)) (:foreground "magenta")) (t (:foreground "medium blue"))))
  '(highlight ((t (:background "white"))))
- '(highlight-symbol-face ((t (:background "ivory2"))))
+ '(highlight-symbol-face ((t (:background "cornsilk2"))))
  '(shadow ((t (:foreground "grey30"))))
  '(secondary-selection ((((class color) (min-colors 88) (background light)) (:background "yellow1")) (((class color) (min-colors 88) (background dark)) (:background "SkyBlue4")) (((class color) (min-colors 16) (background light)) (:background "yellow")) (((class color) (min-colors 16) (background dark)) (:background "SkyBlue4")) (((class color) (min-colors 8)) (:foreground "black" :background "cyan")) (t (:inverse-video t))))
- '(trailing-whitespace ((t (:background "gray90"))))
- '(emms-playlist-selected-face ((t (:background "ivory2" :foreground "black"))))
+ '(trailing-whitespace ((t (:background "cornsilk2"))))
+ '(emms-playlist-selected-face ((t (:background "cornsilk2" :foreground "black"))))
  '(emms-playlist-track-face ((t (:foreground "red4"))))
- '(erc-notice-face ((t (:foreground "gray65"))))
+ '(erc-notice-face ((t (:foreground "cornsilk4"))))
  '(erc-timestamp-face ((t (:foreground "white" :weight bold))))
  '(font-lock-builtin-face ((((class grayscale) (background light)) (:weight bold :foreground "LightGray")) (((class grayscale) (background dark)) (:weight bold :foreground "DimGray")) (((class color) (min-colors 88) (background light)) (:foreground "dark slate blue")) (((class color) (min-colors 88) (background dark)) (:foreground "LightSteelBlue")) (((class color) (min-colors 16) (background light)) (:foreground "Orchid")) (((class color) (min-colors 16) (background dark)) (:foreground "LightSteelBlue")) (((class color) (min-colors 8)) (:weight bold :foreground "blue")) (t (:weight bold))))
  '(font-lock-comment-delimiter-face ((default (:inherit (font-lock-comment-face)))))
@@ -67,7 +67,7 @@
  '(font-lock-doc-face ((t (:foreground "red4"))))
  '(font-lock-function-name-face ((t (:foreground "navy"))))
  '(font-lock-keyword-face ((t (:foreground "black" :weight bold))))
- '(font-lock-negation-char-face ((t (:background "ivory2"))))
+ '(font-lock-negation-char-face ((t (:background "cornsilk2"))))
  '(font-lock-preprocessor-face ((t (:inherit (font-lock-builtin-face)))))
  '(font-lock-regexp-grouping-backslash ((t (:inherit (bold)))))
  '(font-lock-regexp-grouping-construct ((t (:inherit (bold)))))
@@ -78,9 +78,9 @@
  '(button ((t (:inherit (link)))))
  '(link ((((class color) (min-colors 88) (background light)) (:underline (:color foreground-color :style line) :foreground "RoyalBlue3")) (((class color) (background light)) (:underline (:color foreground-color :style line) :foreground "blue")) (((class color) (min-colors 88) (background dark)) (:underline (:color foreground-color :style line) :foreground "cyan1")) (((class color) (background dark)) (:underline (:color foreground-color :style line) :foreground "cyan")) (t (:inherit (underline)))))
  '(link-visited ((default (:inherit (link))) (((class color) (background light)) (:foreground "magenta4")) (((class color) (background dark)) (:foreground "violet"))))
- '(ein:cell-input-area ((t (:background "ivory2"))) t)
- '(fringe ((t (:inherit default :background "ivory3"))))
- '(header-line ((default (:inherit (mode-line))) (((type tty)) (:underline (:color foreground-color :style line) :inverse-video nil)) (((class color grayscale) (background light)) (:box nil :foreground "grey20" :background "grey90")) (((class color grayscale) (background dark)) (:box nil :foreground "grey90" :background "grey20")) (((class mono) (background light)) (:underline (:color foreground-color :style line) :box nil :inverse-video nil :foreground "black" :background "white")) (((class mono) (background dark)) (:underline (:color foreground-color :style line) :box nil :inverse-video nil :foreground "white" :background "black"))))
+ '(ein:cell-input-area ((t (:background "cornsilk2"))) t)
+ '(fringe ((t (:inherit default :background "cornsilk3"))))
+ '(header-line ((t (:inherit mode-line :background "cornsilk2" :box nil))))
  '(js2-external-variable ((t (:foreground "orange3"))))
  '(tooltip ((((class color)) (:inherit (variable-pitch) :foreground "black" :background "lightyellow")) (t (:inherit (variable-pitch)))))
  '(mode-line ((t (:background "gold" :foreground "black" :box nil))))
@@ -106,19 +106,19 @@
  '(dired-directory ((t (:inherit font-lock-keyword-face))))
  '(dired-filetype-compress ((t (:foreground "Orchid"))))
  '(dired-filetype-execute ((t (:foreground "green4" :weight bold))))
- '(dired-filetype-omit ((t (:foreground "gray50"))))
+ '(dired-filetype-omit ((t (:foreground "cornsilk4"))))
  '(dired-filetype-plain ((t (:foreground "SeaGreen"))))
  '(dired-filetype-source ((t (:foreground "red4" :weight bold))))
  '(dired-filetype-video ((t (:foreground "brown"))))
  '(flymake-warnline ((t (:background "LightBlue3"))))
- '(dired-subtree-depth-1-face ((t (:background "ivory2"))))
- '(dired-subtree-depth-2-face ((t (:background "ivory1"))))
+ '(dired-subtree-depth-1-face ((t (:background "cornsilk2"))))
+ '(dired-subtree-depth-2-face ((t (:background "cornsilk1"))))
  '(dired-subtree-depth-3-face ((t (:background "white"))))
- '(dired-subtree-depth-4-face ((t (:background "ivory2"))))
- '(dired-subtree-depth-5-face ((t (:background "ivory1"))))
+ '(dired-subtree-depth-4-face ((t (:background "cornsilk2"))))
+ '(dired-subtree-depth-5-face ((t (:background "cornsilk1"))))
  '(dired-subtree-depth-6-face ((t (:background "white")))) '(flymake-warnline ((t (:background "LightBlue3"))))
- '(highlight-indentation-face ((t (:inherit fringe :background "ivory3"))))
- '(hl-line ((t (:background "ivory2"))))
+ '(highlight-indentation-face ((t (:inherit fringe :background "cornsilk3"))))
+ '(hl-line ((t (:background "cornsilk2"))))
  '(jabber-activity-face ((t (:background "green1"))))
  '(jabber-chat-error ((t (:background "pink"))))
  '(jabber-chat-prompt-system ((t (:foreground "green3" :weight bold))))
@@ -129,28 +129,28 @@
  '(helm-ff-executable ((t (:foreground "darkgreen" :weight bold))))
  '(helm-ff-symlink ((t (:foreground "orange4"))))
  '(helm-grep-lineno ((t (:foreground "orange4"))))
- '(helm-source-header ((t (:background "ivory2" :foreground "black" :box (:line-width 1 :color "grey75" :style pressed-button) :weight normal :height 1.0 :family "Sans Serif"))))
+ '(helm-source-header ((t (:background "cornsilk2" :foreground "black" :box (:line-width 1 :color "grey75" :style pressed-button) :weight normal :height 1.0 :family "Sans Serif"))))
  '(Info-quoted ((t (:inherit fixed-pitch))))
  '(magit-branch ((t (:inherit magit-header :background "yellow" :box (:line-width 1 :color "grey75" :style released-button)))))
  '(magit-branch-current ((t (:inherit magit-branch-local :background "green1" :box 1))))
  '(magit-branch-local ((t (:background "yellow" :box (:line-width 1 :color "*")))))
- '(magit-branch-remote ((t (:background "ivory2" :foreground "DarkOliveGreen4" :box (:line-width 1 :color "gray25")))))
+ '(magit-branch-remote ((t (:background "cornsilk2" :foreground "DarkOliveGreen4" :box (:line-width 1 :color "cornsilk4")))))
  '(magit-diff-add ((t (:inherit diff-added))))
  '(magit-diff-del ((t (:inherit diff-removed))))
  '(magit-diff-none ((t (:inherit diff-context))))
  '(magit-header ((t (:inherit header-line :background "white"))))
  '(magit-item-highlight ((t (:inherit highlight))))
  '(magit-refname ((t (:foreground "grey30" :box (:line-width 2 :color "grey75")))))
- '(magit-section-heading ((t (:background "ivory2" :box (:line-width 1 :color "grey75" :style released-button) :weight bold))))
+ '(magit-section-heading ((t (:background "cornsilk2" :box (:line-width 1 :color "grey75" :style released-button) :weight bold))))
  '(magit-section-title ((t (:inherit magit-header :box (:line-width 1 :color "grey75" :style released-button)))))
- '(magit-tag ((t (:background "ivory2" :foreground "Goldenrod4" :box (:line-width 1 :color "gray25")))))
+ '(magit-tag ((t (:background "cornsilk2" :foreground "Goldenrod4" :box (:line-width 1 :color "gray25")))))
  '(menu ((((type x-toolkit)) (:background "gray92"))))
  '(org-agenda-date ((t (:inherit org-agenda-structure :background "white" :box (:line-width 1 :color "grey75" :style pressed-button) :height 1.0))))
  '(org-agenda-date-today ((t (:inherit org-agenda-date :slant italic :weight bold :height 1.0))))
  '(org-agenda-dimmed-todo-face ((t (:background "yellow3" :foreground "black"))))
  '(org-agenda-done ((((class color) (min-colors 16) (background light)) (:foreground "#9b9"))))
  '(org-agenda-structure ((t (:background "white" :foreground "Blue3" :box (:line-width 1 :color "grey75" :style pressed-button)))))
- '(org-hide ((((background light)) (:foreground "ivory2"))))
+ '(org-hide ((((background light)) (:foreground "cornsilk2"))))
  '(outline-1 ((t (:weight bold))))
  '(outline-2 ((t (:foreground "red4" :weight bold))))
  '(outline-3 ((t (:foreground "purple4" :weight bold))))
