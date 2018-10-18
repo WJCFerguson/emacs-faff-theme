@@ -110,7 +110,7 @@
  '(dired-filetype-plain ((t (:foreground "SeaGreen"))))
  '(dired-filetype-source ((t (:foreground "red4" :weight bold))))
  '(dired-filetype-video ((t (:foreground "brown"))))
- '(flymake-warnline ((t (:background "LightBlue3"))))
+ '(flymake-warning ((t (:background "gray"))))
  '(dired-subtree-depth-1-face ((t (:background "cornsilk2"))))
  '(dired-subtree-depth-2-face ((t (:background "cornsilk1"))))
  '(dired-subtree-depth-3-face ((t (:background "white"))))
