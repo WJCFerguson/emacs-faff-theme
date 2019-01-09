@@ -118,6 +118,7 @@
  '(dired-subtree-depth-5-face ((t (:background "cornsilk1"))))
  '(dired-subtree-depth-6-face ((t (:background "white")))) '(flymake-warnline ((t (:background "LightBlue3"))))
  '(highlight-indentation-face ((t (:inherit fringe :background "cornsilk3"))))
+ '(hi-green-b ((t (:foreground "green4" :weight bold))))
  '(hl-line ((t (:background "cornsilk2"))))
  '(jabber-activity-face ((t (:background "green1"))))
  '(jabber-chat-error ((t (:background "pink"))))
