@@ -107,6 +107,7 @@
  '(diff-header ((t (:background "grey80" :box (:line-width 2 :color "grey80")))))
  '(diff-hunk-header ((t (:inherit diff-header :box (:line-width 2 :color "grey80")))))
  '(diff-removed ((t (:foreground "red"))))
+ '(dired-async-mode-message ((t (:foreground "red4"))))
  '(dired-directory ((t (:inherit font-lock-keyword-face))))
  '(dired-filetype-compress ((t (:foreground "Orchid"))))
  '(dired-filetype-execute ((t (:foreground "green4" :weight bold))))
