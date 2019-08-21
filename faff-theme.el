@@ -186,6 +186,10 @@
  '(web-mode-html-attr-name-face ((t (:foreground "gray10"))))
  '(web-mode-html-tag-face ((t (:weight bold))))
  '(warning ((t (:foreground "DarkOrange3" :weight bold))))
+ '(whitespace-hspace ((t (:background "LemonChiffon1"))))
+ '(whitespace-line ((t (:background "yellow2"))))
+ '(whitespace-newline ((t (:background "ivory2" :foreground "ivory4" :weight normal))))
+ '(whitespace-space ((t (:foreground "ivory2"))))
  '(window-divider-first-pixel ((t (:foreground "ivory2"))))
  '(window-divider-last-pixel ((t (:foreground "ivory4")))))
 
