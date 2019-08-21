@@ -1,14 +1,16 @@
-emacs-faff-theme
+Emacs Faff Theme
 ================
 
-Emacs Faff Theme - a light theme based on the Emacs default on an cornsilk3
-background, with many tweaks on top.
+A light theme intended to clear but calming and easy to look at.
 
-The font here is the beautiful Ubuntu Mono.
+Originally based on the Emacs default, but with an ivory3 background
+with many tweaks on top.
+
+The font in the screenshot is the beautiful Ubuntu Mono.
 
 ![Screenshot](https://github.com/WJCFerguson/emacs-faff-theme/raw/master/faff-theme.png)
 
-Packages and areas that have therefore had some attention:
+Packages and areas that I use, that have therefore had some attention:
 
 * general font-lock faces for coding (mostly in Py, C, JS)
 * web-mode
@@ -24,4 +26,4 @@ Packages and areas that have therefore had some attention:
 * erc
 * treemacs
 
-Comments, suggestions and pull requests welcome
+Comments, suggestions and pull requests welcome.
