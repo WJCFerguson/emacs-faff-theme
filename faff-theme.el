@@ -143,7 +143,7 @@
  '(helm-source-header ((t (:background "cornsilk2" :foreground "black" :box (:line-width 1 :color "grey75" :style pressed-button) :weight normal :height 1.0 :family "Sans Serif"))))
  '(Info-quoted ((t (:inherit fixed-pitch))))
  '(magit-branch ((t (:inherit magit-header :background "yellow" :box (:line-width 1 :color "grey75" :style released-button)))))
- '(magit-branch-current ((t (:inherit magit-branch-local :background "green1" :box 1))))
+ '(magit-branch-current ((t (:inherit magit-branch-local :background "green1" :weight bold))))
  '(magit-branch-local ((t (:background "yellow" :box (:line-width 1 :color "black")))))
  '(magit-branch-remote ((t (:background "cornsilk2" :foreground "DarkOliveGreen4" :box (:line-width 1 :color "cornsilk4")))))
  '(magit-diff-add ((t (:inherit diff-added))))
