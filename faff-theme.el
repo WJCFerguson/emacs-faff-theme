@@ -115,6 +115,7 @@
  '(dired-filetype-plain ((t (:foreground "SeaGreen"))))
  '(dired-filetype-source ((t (:foreground "red4" :weight bold))))
  '(dired-filetype-video ((t (:foreground "brown"))))
+ '(flymake-note ((t (:underline (:color "green yellow" :style wave)))))
  '(flymake-warning ((t (:background "gray"))))
  '(dired-filetype-js ((t (:foreground "goldenrod4"))))
  '(dired-subtree-depth-2-face ((t (:background "cornsilk1"))))
