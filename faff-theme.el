@@ -176,7 +176,7 @@
  '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "grey20" :foreground "grey55"))))
  '(rjsx-tag ((t (:inherit font-lock-keyword-face))))
  '(rjsx-tag-bracket-face ((t (:inherit font-lock-keyword-face))))
- '(scroll-bar ((t (:background "grey90"))))
+ '(scroll-bar ((t (:background "cornsilk3"))))
  '(sh-heredoc ((t (:foreground "tan4"))))
  '(success ((t (:foreground "darkgreen" :weight bold))))
  '(tool-bar ((default (:foreground "black" :box (:line-width 1 :style released-button))) (((type x w32 mac) (class color)) (:background "grey92"))))
