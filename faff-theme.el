@@ -79,6 +79,7 @@
  '(link ((((class color) (min-colors 88) (background light)) (:underline (:color foreground-color :style line) :foreground "RoyalBlue3")) (((class color) (background light)) (:underline (:color foreground-color :style line) :foreground "blue")) (((class color) (min-colors 88) (background dark)) (:underline (:color foreground-color :style line) :foreground "cyan1")) (((class color) (background dark)) (:underline (:color foreground-color :style line) :foreground "cyan")) (t (:inherit (underline)))))
  '(link-visited ((default (:inherit (link))) (((class color) (background light)) (:foreground "magenta4")) (((class color) (background dark)) (:foreground "violet"))))
  '(ein:cell-input-area ((t (:background "cornsilk2"))) t)
+ '(fill-column-indicator ((t (:inherit shadow :foreground "cornsilk2"))))
  '(fringe ((t (:inherit default :background "cornsilk3"))))
  '(header-line ((t (:inherit mode-line :background "cornsilk4" :weight bold))))
  '(js2-external-variable ((t (:foreground "orange3"))))
