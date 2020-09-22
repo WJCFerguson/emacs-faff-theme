@@ -159,6 +159,7 @@
  '(magit-refname ((t (:foreground "grey30" :box (:line-width 2 :color "grey75")))))
  '(magit-section-heading ((t (:background "cornsilk2" :box (:line-width 1 :color "grey75" :style released-button) :weight bold))))
  '(magit-section-title ((t (:inherit magit-header :box (:line-width 1 :color "grey75" :style released-button)))))
+ '(magit-signature-good ((t (:foreground "green4"))))
  '(magit-tag ((t (:background "cornsilk2" :foreground "Goldenrod4" :box (:line-width 1 :color "gray25")))))
  '(menu ((((type x-toolkit)) (:background "gray92"))))
  '(org-agenda-date ((t (:inherit org-agenda-structure :background "white" :box (:line-width 1 :color "grey75" :style pressed-button) :height 1.0))))
