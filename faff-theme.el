@@ -182,6 +182,8 @@
  '(scroll-bar ((t (:background "cornsilk3"))))
  '(sh-heredoc ((t (:foreground "tan4"))))
  '(success ((t (:foreground "darkgreen" :weight bold))))
+ '(term-color-green ((t (:background "green4" :foreground "green4"))))
+ '(term-color-yellow ((t (:background "yellow1" :foreground "yellow1"))))
  '(tool-bar ((default (:foreground "black" :box (:line-width 1 :style released-button))) (((type x w32 mac) (class color)) (:background "grey92"))))
  '(treemacs-directory-collapsed-face ((t (:inherit treemacs-directory-face :foreground "gray30"))))
  '(treemacs-directory-face ((t (:weight bold))))
