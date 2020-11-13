@@ -45,6 +45,7 @@
 (custom-theme-set-faces
  'faff
  '(default ((t (:foreground "black" :background "cornsilk3"))))
+ '(breakpoint-disabled ((t (:foreground "grey40"))))
  '(match ((t (:background "yellow2"))))
  '(cursor ((t (:background "red3"))))
  '(fixed-pitch ((t (:inherit default :background "cornsilk2"))))
