@@ -182,6 +182,8 @@
  '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "grey20" :foreground "grey55"))))
  '(rjsx-tag ((t (:inherit font-lock-keyword-face))))
  '(rjsx-tag-bracket-face ((t (:inherit font-lock-keyword-face))))
+ '(rst-level-1 ((t (:background "grey85" :weight bold))))
+ '(rst-literal ((t (:inherit shadow :extend t :background "cornsilk2"))))
  '(scroll-bar ((t (:background "cornsilk3"))))
  '(sh-heredoc ((t (:foreground "tan4"))))
  '(shadow ((t (:foreground "grey60"))))
