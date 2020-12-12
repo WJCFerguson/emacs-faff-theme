@@ -205,6 +205,11 @@
  '(window-divider-first-pixel ((t (:foreground "cornsilk2"))))
  '(window-divider-last-pixel ((t (:foreground "cornsilk4")))))
 
+(custom-theme-set-variables
+ 'faff
+  '(ansi-color-names-vector
+   ["black" "red3" "green4" "yellow" "blue2" "magenta4" "cyan4" "white"]))
+
 ;;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
