@@ -186,7 +186,7 @@
  '(rst-literal ((t (:inherit shadow :extend t :background "cornsilk2"))))
  '(scroll-bar ((t (:background "cornsilk3"))))
  '(sh-heredoc ((t (:foreground "tan4"))))
- '(shadow ((t (:foreground "grey60"))))
+ '(shadow ((t (:foreground "cornsilk4"))))
  '(success ((t (:foreground "darkgreen" :weight bold))))
  '(term-color-green ((t (:background "green4" :foreground "green4"))))
  '(term-color-yellow ((t (:background "yellow1" :foreground "yellow1"))))
