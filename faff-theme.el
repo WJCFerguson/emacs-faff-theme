@@ -206,6 +206,7 @@
  '(whitespace-line ((t (:background "yellow2"))))
  '(whitespace-newline ((t (:background "cornsilk2" :foreground "cornsilk4" :weight normal))))
  '(whitespace-space ((t (:foreground "cornsilk2"))))
+ '(window-divider ((t (:inherit default :inverse-video t))))
  '(window-divider-first-pixel ((t (:foreground "cornsilk2"))))
  '(window-divider-last-pixel ((t (:foreground "cornsilk4")))))
 
