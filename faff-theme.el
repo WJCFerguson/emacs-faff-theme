@@ -136,7 +136,7 @@
  '(lsp-face-highlight-read ((t (:background "cornsilk2"))))
  '(lsp-face-highlight-textual ((t (:background "cornsilk4"))))
  '(lsp-face-highlight-write ((t (:background "palegreen1"))))
- '(lsp-ui-sideline-current-symbol ((t (:inherit lsp-ui-sideline-symbol :box (:line-width (1 . 1) :color "cornsilk2") :weight bold))))
+ '(lsp-ui-sideline-current-symbol ((t (:inherit lsp-ui-sideline-symbol :box (:line-width (1 . 1) :color "cornsilk4") :weight bold))))
  '(lsp-ui-sideline-symbol ((t (:foreground "cornsilk2"))))
  '(lsp-ui-sideline-symbol-info ((t (:foreground "gray60" :slant italic))))
  '(helm-M-x-key ((t (:foreground "orange4" :underline t))))
