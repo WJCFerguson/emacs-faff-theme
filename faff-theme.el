@@ -191,7 +191,7 @@
  '(sh-heredoc ((t (:foreground "tan4"))))
  '(shadow ((t (:foreground "cornsilk4"))))
  '(success ((t (:foreground "darkgreen" :weight bold))))
- '(tab-bar ((t (:inherit variable-pitch :background "cornsilk4" :foreground "black"))))
+ '(tab-bar ((t (:inherit variable-pitch :background "black"))))
  '(tab-bar-tab ((t (:inherit tab-bar :background "cornsilk3" :box (:line-width (2 . 1) :style pressed-button)))))
  '(tab-bar-tab-inactive ((t (:inherit tab-bar-tab :background "cornsilk4" :box (:line-width (2 . 1) :style released-button)))))
  '(term-color-green ((t (:background "green4" :foreground "green4"))))
