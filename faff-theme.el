@@ -216,8 +216,14 @@
 
 (custom-theme-set-variables
  'faff
-  '(ansi-color-names-vector
-   ["black" "red3" "green4" "yellow" "blue2" "magenta4" "cyan4" "white"]))
+ ;; ansi-color-names-vector: defaults such as yellow3 are nearly unreadable
+ '(ansi-color-names-vector
+   ["black" "red3" "green4" "yellow" "blue2" "magenta4" "cyan4" "white"])
+ ;; lsp-diagnostics-attributes: the default for `unnecessary', is gray, which is
+ ;; nearly invisible on cornsilk3.
+ '(lsp-diagnostics-attributes
+   '((unnecessary :foreground "cornsilk4")
+     (deprecated :strike-through t))))
 
 ;;;###autoload
 (when load-file-name
