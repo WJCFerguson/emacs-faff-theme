@@ -174,6 +174,7 @@
  '(org-column ((t (:background "cornsilk1" :strike-through nil :underline nil :slant normal :weight normal))))
  '(org-date ((t (:color "grey75" :style released-button))))
  '(org-hide ((((background light)) (:foreground "cornsilk2"))))
+ '(org-table ((t (:inherit org-block :foreground "Blue1"))))
  '(org-verbatim ((t (:inherit shadow :extend t :background "cornsilk2"))))
  '(outline-1 ((t (:weight bold))))
  '(outline-2 ((t (:foreground "dark red" :weight bold))))
