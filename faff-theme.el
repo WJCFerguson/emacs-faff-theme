@@ -54,7 +54,7 @@
  '(minibuffer-prompt ((((background dark)) (:foreground "cyan")) (((type pc)) (:foreground "magenta")) (t (:foreground "medium blue"))))
  '(highlight ((t (:background "white"))))
  '(highlight-symbol-face ((t (:background "cornsilk2"))))
- '(shadow ((t (:foreground "grey30"))))
+ '(shadow ((t (:foreground "cornsilk4"))))
  '(secondary-selection ((((class color) (min-colors 88) (background light)) (:background "yellow1")) (((class color) (min-colors 88) (background dark)) (:background "SkyBlue4")) (((class color) (min-colors 16) (background light)) (:background "yellow")) (((class color) (min-colors 16) (background dark)) (:background "SkyBlue4")) (((class color) (min-colors 8)) (:foreground "black" :background "cyan")) (t (:inverse-video t))))
  '(trailing-whitespace ((t (:background "cornsilk2"))))
  '(emms-playlist-selected-face ((t (:background "cornsilk2" :foreground "black"))))
