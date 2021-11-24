@@ -206,6 +206,7 @@
  '(treemacs-directory-collapsed-face ((t (:inherit treemacs-directory-face :foreground "gray30"))))
  '(treemacs-directory-face ((t (:weight bold))))
  '(treemacs-tags-face ((t (:inherit font-lock-function-name-face))))
+ '(tree-sitter-hl-face:property ((t (:inherit font-lock-constant-face))))
  '(web-mode-doctype-face ((t (:foreground "Grey35"))))
  '(web-mode-html-attr-name-face ((t (:foreground "gray10"))))
  '(web-mode-html-tag-face ((t (:weight bold))))
