@@ -115,7 +115,7 @@
  '(dired-filetype-execute ((t (:foreground "green4" :weight bold))))
  '(dired-filetype-omit ((t (:foreground "cornsilk4"))))
  '(dired-filetype-plain ((t (:foreground "SeaGreen"))))
- '(dired-filetype-source ((t (:foreground "red4" :weight bold))))
+ '(dired-filetype-source ((t (:foreground "red4" :weight normal))))
  '(dired-filetype-video ((t (:foreground "brown"))))
  '(flymake-note ((t (:underline (:color "green yellow" :style wave)))))
  '(flymake-warning ((t (:background "gray"))))
