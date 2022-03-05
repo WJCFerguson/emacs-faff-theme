@@ -49,7 +49,6 @@
  '(breakpoint-disabled ((t (:foreground "grey40"))))
  '(match ((t (:background "yellow2"))))
  '(cursor ((t (:background "red3"))))
- '(fixed-pitch ((t (:inherit default :background "cornsilk2"))))
  '(variable-pitch ((t (:family "Sans Serif"))))
  '(escape-glyph ((((background dark)) (:foreground "cyan")) (((type pc)) (:foreground "magenta")) (t (:foreground "brown"))))
  '(minibuffer-prompt ((((background dark)) (:foreground "cyan")) (((type pc)) (:foreground "magenta")) (t (:foreground "medium blue"))))
@@ -214,7 +213,6 @@
  '(whitespace-line ((t (:background "yellow2"))))
  '(whitespace-newline ((t (:background "cornsilk2" :foreground "cornsilk4" :weight normal))))
  '(whitespace-space ((t (:foreground "cornsilk2"))))
- '(window-divider ((t (:inherit default :inverse-video t))))
  '(window-divider-first-pixel ((t (:foreground "cornsilk2"))))
  '(window-divider-last-pixel ((t (:foreground "cornsilk4")))))
 
