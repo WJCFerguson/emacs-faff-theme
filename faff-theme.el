@@ -81,7 +81,7 @@
  '(ein:cell-input-area ((t (:background "cornsilk2"))) t)
  '(fill-column-indicator ((t (:inherit shadow :foreground "cornsilk2"))))
  '(fringe ((t (:inherit default :background "cornsilk3"))))
- '(header-line ((t (:inherit mode-line :background "cornsilk4" :weight bold))))
+ '(header-line ((t (:background "#ddd8bd"))))
  '(js2-external-variable ((t (:foreground "orange3"))))
  '(js2-function-call ((t (:inherit font-lock-function-name-face))))
  '(js2-jsdoc-type ((t (:inherit font-lock-type-face))))
