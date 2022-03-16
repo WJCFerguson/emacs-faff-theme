@@ -87,7 +87,7 @@
  '(js2-jsdoc-type ((t (:inherit font-lock-type-face))))
  '(js2-jsdoc-value ((t (:inherit font-lock-variable-name-face)))) '(dired-subtree-depth-1-face ((t (:background "cornsilk2"))))
  '(js2-object-property ((t (:inherit font-lock-variable-name-face))))
- '(tooltip ((((class color)) (:inherit (variable-pitch) :foreground "black" :background "lightyellow")) (t (:inherit (variable-pitch)))))
+ '(tooltip ((t (:inherit nil :background "lightyellow" :foreground "black"))))
  '(mode-line ((t (:background "gold" :foreground "black" :box nil))))
  '(mode-line-buffer-id ((t (:weight bold))))
  '(mode-line-emphasis ((t (:weight bold))))
