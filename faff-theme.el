@@ -208,6 +208,7 @@
  '(treemacs-directory-face ((t (:weight bold))))
  '(treemacs-tags-face ((t (:inherit font-lock-function-name-face))))
  '(tree-sitter-hl-face:embedded ((t nil)))
+ '(tree-sitter-hl-face:function ((t (:inherit font-lock-function-name-face :weight bold))))
  '(tree-sitter-hl-face:property ((t (:inherit font-lock-constant-face))))
  '(tree-sitter-hl-face:punctuation ((t nil)))
  '(web-mode-doctype-face ((t (:foreground "Grey35"))))
