@@ -137,6 +137,7 @@
  '(lsp-face-highlight-textual ((t (:background "cornsilk4"))))
  '(lsp-face-highlight-write ((t (:background "palegreen1"))))
  '(lsp-headerline-breadcrumb-symbols-face ((t (:inherit font-lock-doc-face))))
+ '(lsp-ui-doc-background ((t (:background "cornsilk2"))))
  '(lsp-ui-sideline-current-symbol ((t (:inherit lsp-ui-sideline-symbol :box (:line-width 1 :color "cornsilk4") :weight bold))))
  '(lsp-ui-sideline-symbol ((t (:foreground "cornsilk2"))))
  '(lsp-ui-sideline-symbol-info ((t (:foreground "gray60" :slant italic))))
