@@ -102,7 +102,9 @@
  '(aw-leading-char-face ((t (:foreground "red" :height 4.0))))
  '(aw-mode-line-face ((t (:background "green1" :inverse-video t))))
  '(calendar-today ((t (:background "yellow1" :underline t))))
- '(custom-button ((((type x w32 mac) (class color)) (:background "grey85" :foreground "black" :box (:line-width 1 :style released-button)))))
+ '(custom-button ((t (:background "cornsilk2" :foreground "black" :box (:line-width (2 . 2) :style released-button)))))
+ '(custom-button-mouse ((t (:background "cornsilk1" :foreground "black" :box (:line-width (2 . 2) :style released-button)))))
+ '(custom-button-pressed ((t (:background "cornsilk2" :foreground "black" :box (:line-width (2 . 2) :style pressed-button)))))
  '(diff-added ((t (:inherit diff-changed :foreground "green3"))))
  '(diff-file-header ((t (:background "grey80" :box (:line-width 2 :color "grey80") :weight bold))))
  '(diff-header ((t (:background "grey80" :box (:line-width 2 :color "grey80")))))
@@ -219,6 +221,7 @@
  '(whitespace-line ((t (:background "yellow2"))))
  '(whitespace-newline ((t (:background "cornsilk2" :foreground "cornsilk4" :weight normal))))
  '(whitespace-space ((t (:foreground "cornsilk2"))))
+ '(widget-field ((t (:extend t :background "cornsilk2" :box (:line-width (1 . -1) :color "gray80")))))
  '(window-divider-first-pixel ((t (:foreground "cornsilk2"))))
  '(window-divider-last-pixel ((t (:foreground "cornsilk4")))))
 
