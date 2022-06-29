@@ -198,7 +198,8 @@
  '(rjsx-tag-bracket-face ((t (:inherit font-lock-keyword-face))))
  '(rst-level-1 ((t (:background "grey85" :weight bold))))
  '(rst-literal ((t (:inherit shadow :extend t :background "cornsilk2"))))
- '(scroll-bar ((t (:background "cornsilk3"))))
+ '(scroll-bar ((t (:background "cornsilk3" :foreground "#ddd8bd"))))
+ '(separator-line ((t (:background "#d5d0b8" :height 0.1))))
  '(sh-heredoc ((t (:foreground "tan4"))))
  '(shadow ((t (:foreground "cornsilk4"))))
  '(success ((t (:foreground "darkgreen" :weight bold))))
@@ -227,6 +228,7 @@
  '(whitespace-newline ((t (:background "cornsilk2" :foreground "cornsilk4" :weight normal))))
  '(whitespace-space ((t (:foreground "cornsilk2"))))
  '(widget-field ((t (:extend t :background "cornsilk2" :box (:line-width (1 . -1) :color "gray80")))))
+ '(window-divider ((t (:foreground "cornsilk3"))))
  '(window-divider-first-pixel ((t (:foreground "cornsilk2"))))
  '(window-divider-last-pixel ((t (:foreground "cornsilk4")))))
 
