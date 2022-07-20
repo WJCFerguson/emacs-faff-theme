@@ -90,7 +90,7 @@
  '(js2-jsdoc-value ((t (:inherit font-lock-variable-name-face)))) '(dired-subtree-depth-1-face ((t (:background "cornsilk2"))))
  '(js2-object-property ((t (:inherit font-lock-variable-name-face))))
  '(tooltip ((t (:inherit nil :background "lightyellow" :foreground "black"))))
- '(mode-line ((t (:box (:line-width (1 . 1) :color "black" :style flat-button)))))
+ '(mode-line ((t (:box nil :family "sans serif"))))
  '(mode-line-active ((t (:inherit mode-line :background "gold"))))
  '(mode-line-inactive ((t (:background "cornsilk4" :inherit mode-line))))
  '(mode-line-buffer-id ((t (:weight bold))))
