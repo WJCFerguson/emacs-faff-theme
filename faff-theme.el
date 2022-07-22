@@ -45,6 +45,17 @@
 (custom-theme-set-faces
  'faff
  '(default ((t (:foreground "black" :background "cornsilk3"))))
+ '(ansi-color-blue ((t (:background "blue4" :foreground "blue4"))))
+ '(ansi-color-bright-blue ((t (:background "blue2" :foreground "blue2"))))
+ '(ansi-color-bright-cyan ((t (:background "cyan1" :foreground "cyan1"))))
+ '(ansi-color-bright-green ((t (:background "green1" :foreground "green1"))))
+ '(ansi-color-bright-yellow ((t (:background "yellow1" :foreground "yellow1"))))
+ '(ansi-color-cyan ((t (:background "cyan4" :foreground "cyan4"))))
+ '(ansi-color-fast-blink ((t (:box (1 . -1)))))
+ '(ansi-color-green ((t (:background "green4" :foreground "green4"))))
+ '(ansi-color-magenta ((t (:background "magenta4" :foreground "magenta4"))))
+ '(ansi-color-slow-blink ((t (:box (1 . -1)))))
+ '(ansi-color-yellow ((t (:background "yellow4" :foreground "yellow4"))))
  '(bookmark-face ((t (:background "cornsilk3" :foreground "DarkOrange1"))))
  '(breakpoint-disabled ((t (:foreground "grey40"))))
  '(match ((t (:background "yellow2"))))
@@ -234,9 +245,6 @@
 
 (custom-theme-set-variables
  'faff
- ;; ansi-color-names-vector: defaults such as yellow3 are nearly unreadable
- '(ansi-color-names-vector
-   ["black" "red3" "green4" "yellow4" "blue2" "magenta4" "cyan4" "white"])
  ;; lsp-diagnostics-attributes: the default for `unnecessary', is gray, which is
  ;; nearly invisible on cornsilk3.
  '(lsp-diagnostics-attributes
