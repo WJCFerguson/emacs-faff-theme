@@ -140,6 +140,7 @@
  '(dired-subtree-depth-4-face ((t (:background "cornsilk2"))))
  '(dired-subtree-depth-5-face ((t (:background "cornsilk1"))))
  '(dired-subtree-depth-6-face ((t (:background "white")))) '(flymake-warnline ((t (:background "LightBlue3"))))
+ '(elisp-shorthand-font-lock-face ((t (:inherit font-lock-keyword-face :foreground "cyan4"))))
  '(error ((t (:foreground "red3" :weight bold))))
  '(hi-green-b ((t (:foreground "green4" :weight bold))))
  '(hl-line ((t (:extend t :background "#ddd8bd"))))
