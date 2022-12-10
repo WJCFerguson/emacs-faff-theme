@@ -214,6 +214,7 @@
  '(scroll-bar ((t (:background "cornsilk3" :foreground "#ddd8bd"))))
  '(separator-line ((t (:background "#d5d0b8" :height 0.1))))
  '(sh-heredoc ((t (:foreground "tan4"))))
+ '(sh-quoted-exec ((t (:foreground "magenta4"))))
  '(shadow ((t (:foreground "cornsilk4"))))
  '(success ((t (:foreground "darkgreen" :weight bold))))
  '(tab-bar ((t (:background "cornsilk4" :height 0.9))))
