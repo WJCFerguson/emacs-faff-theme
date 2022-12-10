@@ -211,7 +211,7 @@
  '(rjsx-tag-bracket-face ((t (:inherit font-lock-keyword-face))))
  '(rst-level-1 ((t (:background "grey85" :weight bold))))
  '(rst-literal ((t (:inherit shadow :extend t :background "cornsilk2"))))
- '(scroll-bar ((t (:background "cornsilk3" :foreground "#ddd8bd"))))
+ '(scroll-bar ((t (:background "#aca894" :foreground "#ddd8bd"))))
  '(separator-line ((t (:background "#d5d0b8" :height 0.1))))
  '(sh-heredoc ((t (:foreground "tan4"))))
  '(sh-quoted-exec ((t (:foreground "magenta4"))))
