@@ -113,8 +113,6 @@
  '(match ((((class color) (min-colors 88) (background light)) (:background "yellow1")) (((class color) (min-colors 88) (background dark)) (:background "RoyalBlue3")) (((class color) (min-colors 8) (background light)) (:foreground "black" :background "yellow")) (((class color) (min-colors 8) (background dark)) (:foreground "white" :background "blue")) (((type tty) (class mono)) (:inverse-video t)) (t (:background "gray"))))
  '(next-error ((t (:inherit (region)))))
  '(query-replace ((t (:inherit (isearch)))))
- '(aw-leading-char-face ((t (:foreground "red" :height 4.0))))
- '(aw-mode-line-face ((t (:background "green1" :inverse-video t))))
  '(calendar-today ((t (:background "yellow1" :underline t))))
  '(custom-button ((t (:background "cornsilk2" :foreground "black" :box (:line-width (2 . 2) :style released-button)))))
  '(custom-button-mouse ((t (:background "cornsilk1" :foreground "black" :box (:line-width (2 . 2) :style released-button)))))
