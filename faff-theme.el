@@ -209,7 +209,7 @@
  '(rst-level-1 ((t (:background "grey85" :weight bold))))
  '(rst-literal ((t (:inherit shadow :extend t :background "cornsilk2"))))
  '(separator-line ((t (:background "cornsilk4" :height 0.1))))
- '(scroll-bar ((t (:background "cornsilk4" :foreground "cornsilk3"))))
+ '(scroll-bar ((t (:background "#aca895" :foreground "cornsilk3"))))
  '(sh-heredoc ((t (:foreground "tan4"))))
  '(sh-quoted-exec ((t (:foreground "magenta4"))))
  '(shadow ((t (:foreground "cornsilk4"))))
