@@ -94,7 +94,7 @@
  '(ein:cell-input-area ((t (:background "cornsilk2"))) t)
  '(fill-column-indicator ((t (:inherit shadow :foreground "#d5d0b8"))))
  '(fringe ((t (:inherit default :background "cornsilk3"))))
- '(header-line ((t (:background "#ddd8bd" :box (:line-width (1 . 2) :color "#ddd8bd" :style released-button)))))
+ '(header-line ((t (:background "#ddd8bd" :box (:line-width (1 . 1) :color "#ddd8bd" :style released-button)))))
  '(js2-external-variable ((t (:foreground "orange3"))))
  '(js2-function-call ((t (:inherit font-lock-function-name-face))))
  '(js2-jsdoc-type ((t (:inherit font-lock-type-face))))
