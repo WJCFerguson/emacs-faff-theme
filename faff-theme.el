@@ -149,7 +149,7 @@
  '(jabber-title-large ((t (:weight bold :height 2.0 :width expanded))))
  '(jabber-title-medium ((t (:background "#ffb" :box (:line-width 2 :color "grey75" :style released-button) :weight bold :height 1.2 :width expanded))))
  '(lsp-face-highlight-read ((t (:background "cornsilk2"))))
- '(lsp-face-highlight-textual ((t (:background "cornsilk4"))))
+ '(lsp-face-highlight-textual ((t (:background "cornsilk2"))))
  '(lsp-face-highlight-write ((t (:background "palegreen1"))))
  '(lsp-headerline-breadcrumb-symbols-face ((t (:inherit font-lock-doc-face))))
  '(lsp-ui-doc-background ((t (:background "cornsilk2"))))
