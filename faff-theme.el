@@ -189,7 +189,7 @@
  '(org-agenda-done ((((class color) (min-colors 16) (background light)) (:foreground "#9b9"))))
  '(org-agenda-restriction-lock ((t (:background "cornsilk1"))))
  '(org-agenda-structure ((t (:background "cornsilk1" :foreground "Blue3" :box (:line-width 1 :color "grey75" :style pressed-button)))))
- '(org-block ((t (:extend t :background "cornsilk2"))))
+ '(org-block ((t (:inherit org-verbatim :extend t))))
  '(org-column ((t (:background "cornsilk1" :strike-through nil :underline nil :slant normal :weight normal))))
  '(org-date ((t (:color "grey75" :style released-button))))
  '(org-hide ((((background light)) (:foreground "cornsilk2"))))
