@@ -58,6 +58,7 @@
  '(ansi-color-yellow ((t (:background "yellow4" :foreground "yellow4"))))
  '(bookmark-face ((t (:background "cornsilk3" :foreground "DarkOrange1"))))
  '(breakpoint-disabled ((t (:foreground "grey40"))))
+ '(eglot-highlight-symbol-face ((t (:background "cornsilk2" :inherit bold))))
  '(match ((t (:background "yellow2"))))
  '(cursor ((t (:background "red3"))))
  '(variable-pitch ((t (:family "Sans Serif"))))
