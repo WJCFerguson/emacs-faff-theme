@@ -134,6 +134,7 @@
  '(flymake-note ((t (:underline (:color "green yellow" :style wave)))))
  '(flymake-warning ((t (:background "gray"))))
  '(dired-filetype-js ((t (:foreground "goldenrod4"))))
+ '(dired-filetype-program ((t (:foreground "green4"))))
  '(dired-subtree-depth-2-face ((t (:background "cornsilk1"))))
  '(dired-subtree-depth-3-face ((t (:background "white"))))
  '(dired-subtree-depth-4-face ((t (:background "cornsilk2"))))
