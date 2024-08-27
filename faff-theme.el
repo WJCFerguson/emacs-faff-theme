@@ -158,6 +158,7 @@
  '(jabber-chat-text-local ((t (:foreground "red4"))))
  '(jabber-title-large ((t (:weight bold :height 2.0 :width expanded))))
  '(jabber-title-medium ((t (:background "#ffb" :box (:line-width 2 :color "grey75" :style released-button) :weight bold :height 1.2 :width expanded))))
+ '(kubernetes-namespace ((t (:foreground "Goldenrod4"))))
  '(lsp-face-highlight-read ((t (:background "cornsilk2"))))
  '(lsp-face-highlight-textual ((t (:background "cornsilk2"))))
  '(lsp-face-highlight-write ((t (:background "palegreen1"))))
