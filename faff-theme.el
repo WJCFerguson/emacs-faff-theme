@@ -149,6 +149,8 @@
  '(dired-subtree-depth-6-face ((t (:background "white")))) '(flymake-warnline ((t (:background "LightBlue3"))))
  '(elisp-shorthand-font-lock-face ((t (:inherit font-lock-keyword-face :foreground "cyan4"))))
  '(error ((t (:foreground "red3" :weight bold))))
+ '(go-test--ok-face ((t (:foreground "green4"))))
+ '(go-test--standard-face ((t (:weight bold))))
  '(hi-green-b ((t (:foreground "green4" :weight bold))))
  '(hl-line ((t (:extend t :background "#ddd8bd"))))
  '(hl-line-face ((t (:extend t :background "#ddd8bd"))))
