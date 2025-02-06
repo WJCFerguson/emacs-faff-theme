@@ -196,6 +196,7 @@
  '(magit-tag ((t (:background "cornsilk2" :foreground "Goldenrod4" :box (:line-width 1 :color "gray25")))))
  '(markdown-code-face ((t (:inherit default :background "cornsilk2"))))
  '(menu ((((type x-toolkit)) (:background "gray92"))))
+ '(mmm-default-submode-face ((t (:background "#ddd8bd"))))
  '(org-agenda-date ((t (:inherit org-agenda-structure :background "cornsilk1" :box (:line-width 1 :color "grey75" :style pressed-button) :height 1.0))))
  '(org-agenda-date-today ((t (:inherit org-agenda-date :slant italic :weight bold :height 1.0))))
  '(org-agenda-dimmed-todo-face ((t (:background "yellow3" :foreground "black"))))
