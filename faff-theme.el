@@ -48,7 +48,7 @@
  '(ansi-color-blue ((t (:background "blue4" :foreground "blue4"))))
  '(ansi-color-bright-blue ((t (:background "blue2" :foreground "blue2"))))
  '(ansi-color-bright-cyan ((t (:background "cyan1" :foreground "cyan1"))))
- '(ansi-color-bright-green ((t (:background "green1" :foreground "green1"))))
+ '(ansi-color-bright-green ((t (:background "green2" :foreground "green1"))))
  '(ansi-color-bright-yellow ((t (:background "yellow1" :foreground "yellow1"))))
  '(ansi-color-cyan ((t (:background "cyan4" :foreground "cyan4"))))
  '(ansi-color-fast-blink ((t (:box (1 . -1)))))
