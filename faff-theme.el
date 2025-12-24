@@ -56,6 +56,7 @@
  '(ansi-color-magenta ((t (:background "magenta4" :foreground "magenta4"))))
  '(ansi-color-slow-blink ((t (:box (1 . -1)))))
  '(ansi-color-yellow ((t (:background "yellow4" :foreground "yellow4"))))
+ '(ansi-color-faint ((t (:foreground "gray50"))))
  '(bookmark-face ((t (:background "cornsilk3" :foreground "DarkOrange1"))))
  '(breakpoint-disabled ((t (:foreground "grey40"))))
  '(eglot-highlight-symbol-face ((t (:background "cornsilk2" :inherit bold))))
