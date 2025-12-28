@@ -66,7 +66,7 @@
  '(eshell-ls-executable ((t (:foreground "DarkGreen" :weight bold))))
  '(eshell-ls-product ((t (:foreground "OrangeRed4"))))
  '(eshell-ls-special ((t (:foreground "Magenta4" :weight bold))))
- '(eshell-prompt ((t (:background "cornsilk2" :weight bold))))
+ '(eshell-prompt ((t (:background "#ddd8bd"))))
  '(match ((t (:background "yellow2"))))
  '(cursor ((t (:background "red3"))))
  '(variable-pitch ((t (:family "Sans Serif"))))
