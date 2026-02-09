@@ -237,7 +237,7 @@
  '(symbol-overlay-face-4 ((t (:background "orchid1" :foreground "black"))))
  '(symbol-overlay-face-5 ((t (:background "red1" :foreground "black"))))
  '(tab-bar ((t (:background "#aca895" :height 0.9))))
- '(tab-bar-tab-inactive ((t (:inherit (variable-pitch tab-tar)))))
+ '(tab-bar-tab-inactive ((t (:inherit (variable-pitch tab-bar)))))
  '(tab-bar-tab ((t (:inherit (tab-bar-tab-inactive) :background "cornsilk3"))))
  '(term-color-green ((t (:background "green4" :foreground "green4"))))
  '(term-color-cyan ((t (:background "cyan4" :foreground "cyan4"))))
