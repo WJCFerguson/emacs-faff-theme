@@ -220,7 +220,7 @@
  '(powerline-active2 ((t (:inherit mode-line :background "gold3"))))
  '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "grey11" :foreground "grey45"))))
  '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "grey20" :foreground "grey55"))))
- '(region ((t (:extend t :background "gold2"))))
+ '(region ((t (:extend t :background "cornsilk1"))))
  '(rjsx-tag ((t (:inherit font-lock-keyword-face))))
  '(rjsx-tag-bracket-face ((t (:inherit font-lock-keyword-face))))
  '(rst-level-1 ((t (:background "grey85" :weight bold))))
