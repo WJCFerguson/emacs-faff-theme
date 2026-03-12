@@ -177,7 +177,7 @@
  '(helm-grep-lineno ((t (:foreground "orange4"))))
  '(helm-source-header ((t (:background "cornsilk2" :foreground "black" :box (:line-width 1 :color "grey75" :style pressed-button) :weight normal :height 1.0 :family "Sans Serif"))))
  '(hydra-face-pink ((t (:foreground "deeppink" :weight bold))))
- '(Info-quoted ((t (:inherit fixed-pitch))))
+ '(Info-quoted ((t (:inherit fixed-pitch :background "#ddd8bd" :height 0.875))))
  '(magit-branch ((t (:inherit magit-header :background "yellow" :box (:line-width 1 :color "grey75" :style released-button)))))
  '(magit-branch-current ((t (:inherit magit-branch-local :background "green1" :weight bold))))
  '(magit-branch-local ((t (:background "yellow" :box (:line-width 1 :color "black")))))
