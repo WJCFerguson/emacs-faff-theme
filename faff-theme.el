@@ -86,6 +86,7 @@
  '(emms-playlist-track-face ((t (:foreground "red4"))))
  '(erc-notice-face ((t (:foreground "cornsilk4"))))
  '(erc-timestamp-face ((t (:foreground "white" :weight bold))))
+ '(font-lock-builtin-face ((t (:foreground "darkslateblue"))))
  '(font-lock-comment-face ((t (:foreground "firebrick4"))))
  '(font-lock-constant-face ((t (:foreground "deepskyblue4"))))
  '(font-lock-doc-face ((t (:inherit font-lock-comment-face))))
