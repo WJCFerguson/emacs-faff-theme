@@ -1,284 +1,339 @@
-;;; faff-theme.el --- Light Emacs color theme on cornsilk3 background
+;;; faff-theme.el --- Light cornsilk theme with warm, earthy colors -*- lexical-binding:t -*-
 
-;; Copyright (C) 2003-2014 Free Software Foundation, Inc.
+;; Copyright (C) 2003-2026 Free Software Foundation, Inc.
 
 ;; Author: James Ferguson <(concat "wjcferguson" at-sign "gmail.com")>
 ;; URL: https://github.com/WJCFerguson/emacs-faff-theme
-;; Version: 3.10
-;; Keywords: color theme
+;; Version: 4.0
+;; Package-Requires: ((emacs "28.1") (modus-themes "5.0.0"))
+;; Keywords: faces, theme
 
-;; This file is not part of GNU Emacs.
+;; This file is NOT part of GNU Emacs.
 
 ;; GNU Emacs is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
 ;; (at your option) any later version.
-
+;;
 ;; GNU Emacs is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;; GNU General Public License for more details.
-
+;;
 ;; You should have received a copy of the GNU General Public License
-;; along with GNU Emacs.  If not, see <http://www.gnu.org/licenses/>.
+;; along with GNU Emacs.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 ;;
-;; The default Emacs theme with an cornsilk3 background, with tweaks applied.  Used
-;; mostly for coding and magit, with some customizations for org, powerline,
-;; hl-line
-;;
-;; This file created using customize-create-theme, rather than hand-rolled.
-;; Comments and change suggestions welcome
+;; A warm, earthy light theme with a cornsilk3 background, built on top
+;; of the `modus-themes' framework.  Adopts palette mapping refinements
+;; from `ef-themes-palette-common' for subtler UI defaults; see the
+;; "Adopted from ef-themes" block in the mappings to revert to stock
+;; modus behavior.
 ;;
 ;; To use it, put the following in your Emacs configuration file:
 ;;
 ;;   (load-theme 'faff t)
-;;
-;; Requirements: Emacs 24.
 
 ;;; Code:
 
-(deftheme faff
-  "Emacs default with cornsilk3 background and a few tweaks")
+(require 'modus-themes)
 
-(custom-theme-set-faces
+(defconst faff-palette-partial
+  '(;; Core UI colors
+    (cursor "#cd0000")              ; red3
+    (bg-main "#cdc8b1")            ; cornsilk3
+    ;; NOTE: bg-dim is intentionally lighter than bg-main (inverted from
+    ;; the modus convention) so that code blocks, diff context, and prose
+    ;; blocks appear as subtle highlights rather than dimmed areas.
+    (bg-dim "#e0dbc0")             ; lighter than main (code blocks, diff context)
+    (bg-alt "#b0ab96")             ; chrome (tab bar, inactive mode line)
+    (fg-main "#000000")            ; black
+    (fg-dim "#8b8878")             ; cornsilk4
+    (fg-alt "#345160")             ; muted steel (cyan-faint)
+    (bg-active "#a5a08c")
+    (bg-inactive "#eee8cd")        ; cornsilk2
+    (border "#8b8878")             ; cornsilk4
+
+    ;; Base/warmer/cooler contrast: 5.5:1 (blue 7:1, cyan 6.5:1).
+    ;; Faint contrast: 4.5-5.0:1.
+    ;; Hue spreads hand-tuned per family.
+    ;; Base hues: red=5 yellow=36 green=140 cyan=200 blue=230 magenta=305
+
+    ;; Red H=5, warmer→25, cooler→340 (35° spread, S=85/35)
+    (red "#8e160c")
+    (red-warmer "#743609")
+    (red-cooler "#8f0c37")
+    (red-faint "#7f433d")
+
+    ;; Green H=140, warmer→95, cooler→170 (75° spread, S=85/20)
+    (green "#004a12")
+    (green-warmer "#144800")
+    (green-cooler "#004830")
+    (green-faint "#224e2e")
+
+    ;; Yellow H=36, warmer→22, cooler→45 (23° spread, S=85/35)
+    (yellow "#644008")
+    (yellow-warmer "#79320a")
+    (yellow-cooler "#594507")
+    (yellow-faint "#665131")
+
+    ;; Blue H=230, warmer→250, cooler→218 (32° spread, S=75/35, 7:1)
+    (blue "#152a93")
+    (blue-warmer "#2f18a4")
+    (blue-cooler "#113574")
+    (blue-faint "#3a4477")
+
+    ;; Magenta H=305, warmer→335, cooler→275 (60° spread, S=80/30)
+    (magenta "#810e78")
+    (magenta-warmer "#8c1043")
+    (magenta-cooler "#6a13a8")
+    (magenta-faint "#784073")
+
+    ;; Cyan H=200, warmer→180, cooler→215 (35° spread, S=85/30, 6.5:1)
+    (cyan "#08415d")
+    (cyan-warmer "#064444")
+    (cyan-cooler "#0a3a7e")
+    (cyan-faint "#345160")
+
+    ;; Intense backgrounds (for search highlights etc.)
+    (bg-red-intense "#ff8f88")
+    (bg-green-intense "#80ff80")
+    (bg-yellow-intense "#ffff40")
+    (bg-blue-intense "#aabbff")
+    (bg-magenta-intense "#d09fff")
+    (bg-cyan-intense "#80d8c0")
+
+    ;; Subtle backgrounds
+    (bg-red-subtle "#efcabf")
+    (bg-green-subtle "#c3e6a0")
+    (bg-yellow-subtle "#efe07f")
+    (bg-blue-subtle "#c7dbe8")
+    (bg-magenta-subtle "#e3d0e7")
+    (bg-cyan-subtle "#bfe0d0")
+
+    ;; Diff backgrounds
+    (bg-added "#c8e0b8")
+    (bg-added-faint "#d4e4c8")
+    (bg-added-refine "#b8d8a5")
+    (fg-added "#004500")
+
+    (bg-changed "#e8e0a0")
+    (bg-changed-faint "#ede6b8")
+    (bg-changed-refine "#e0d690")
+    (fg-changed "#553d00")
+
+    (bg-removed "#e8c8b0")
+    (bg-removed-faint "#e8d4c0")
+    (bg-removed-refine "#e0b8a0")
+    (fg-removed "#8f1013")
+
+    ;; UI element backgrounds
+    (bg-mode-line-active "#ffd700") ; gold
+    (fg-mode-line-active "#000000")
+    (fg-mode-line-inactive "#50504a") ; readable against bg-alt
+    (bg-completion "#dfd8c0")
+    (bg-hover "#c0cbd7")
+    (bg-hover-secondary "#c5d8a2")
+    (bg-hl-line "#ddd8bd")
+    (bg-paren-match "#9fd0cc")
+    (bg-err "#ffbbbb")
+    (bg-warning "#efe07f")
+    (bg-info "#cdeeb0")
+    (bg-region "#e0dcc8")))
+
+(defconst faff-palette-mappings-partial
+  '((err red-warmer)
+    (warning yellow-warmer)
+    (info green)
+
+    (fg-link blue-warmer)
+    (fg-link-visited magenta-faint)
+    (name green)
+    (keybind red-warmer)
+    (identifier cyan-faint)
+    (fg-prompt blue-warmer)
+
+    (builtin blue-cooler)
+    (comment red)
+    (constant cyan-cooler)
+    (fnname blue-cooler)
+    (fnname-call blue-cooler)
+    (keyword fg-main)
+    (preprocessor magenta-cooler)
+    (docstring red)
+    (string green-warmer)
+    (type green)
+    (variable fg-main)
+    (variable-use fg-main)
+    (rx-backslash magenta-warmer)
+    (rx-construct blue-cooler)
+
+    (accent-0 red-warmer)
+    (accent-1 green)
+    (accent-2 blue)
+    (accent-3 yellow-warmer)
+
+    (date-common cyan-faint)
+    (date-deadline red-warmer)
+    (date-deadline-subtle red)
+    (date-event fg-alt)
+    (date-holiday red-warmer)
+    (date-now fg-main)
+    (date-range fg-alt)
+    (date-scheduled yellow-cooler)
+    (date-scheduled-subtle yellow-faint)
+    (date-weekday red)
+    (date-weekend cyan)
+
+    (fg-prose-code green-cooler)
+    (prose-done green)
+    (fg-prose-macro blue)
+    (prose-metadata fg-dim)
+    (prose-metadata-value fg-alt)
+    (prose-table fg-alt)
+    (prose-table-formula warning)
+    (prose-tag yellow-faint)
+    (prose-todo red-warmer)
+    (fg-prose-verbatim red-cooler)
+
+    (mail-cite-0 red)
+    (mail-cite-1 yellow)
+    (mail-cite-2 green)
+    (mail-cite-3 blue-faint)
+    (mail-part green-cooler)
+    (mail-recipient yellow)
+    (mail-subject red-warmer)
+    (mail-other yellow-warmer)
+
+    (bg-search-static bg-warning)
+    (bg-search-current bg-yellow-intense)
+    (bg-search-lazy bg-cyan-intense)
+    (bg-search-replace bg-red-intense)
+
+    (bg-search-rx-group-0 bg-magenta-intense)
+    (bg-search-rx-group-1 bg-green-intense)
+    (bg-search-rx-group-2 bg-red-subtle)
+    (bg-search-rx-group-3 bg-cyan-subtle)
+
+    (bg-space-err bg-yellow-intense)
+
+    ;; Faff-specific UI overrides
+    (bg-tab-bar bg-alt)
+    (bg-tab-other bg-alt)           ; inactive tabs match tab bar
+    (bg-mode-line-inactive bg-alt)
+    (fg-region unspecified)         ; let text colors show through selection
+    (fringe unspecified)            ; fringe matches background
+
+    ;; Adopted from ef-themes-palette-common: refinements over modus
+    ;; defaults for subtler links, cleaner search/completion, and simpler
+    ;; mark/prominent/argument colors.  Remove this block to revert to
+    ;; stock modus-themes behavior.
+    (property variable)
+    (bg-diff-context bg-dim)
+    (fg-link-symbolic fg-alt)
+    (underline-link border)
+    (underline-link-visited border)
+    (underline-link-symbolic border)
+    (bg-line-number-active unspecified)
+    (fg-line-number-active accent-0)
+    (bg-line-number-inactive unspecified)
+    (bg-prominent-err bg-err)
+    (bg-prominent-warning bg-warning)
+    (bg-prominent-note bg-info)
+    (fg-prominent-err err)
+    (fg-prominent-warning warning)
+    (fg-prominent-note info)
+    (bg-active-argument bg-warning)
+    (fg-active-argument warning)
+    (bg-active-value bg-info)
+    (fg-active-value info)
+    (bg-mark-delete bg-err)
+    (fg-mark-delete err)
+    (bg-mark-select bg-info)
+    (fg-mark-select info)
+    (bg-mark-other bg-warning)
+    (fg-mark-other warning)
+    (fg-search-current fg-main)
+    (fg-search-lazy fg-main)
+    (fg-search-static fg-main)
+    (fg-search-replace fg-main)
+    (fg-search-rx-group-0 fg-main)
+    (fg-search-rx-group-1 fg-main)
+    (fg-search-rx-group-2 fg-main)
+    (fg-search-rx-group-3 fg-main)
+    (fg-completion-match-0 accent-0)
+    (fg-completion-match-1 accent-1)
+    (fg-completion-match-2 accent-2)
+    (fg-completion-match-3 accent-3)
+
+    (rainbow-0 red)
+    (rainbow-1 magenta-cooler)
+    (rainbow-2 green)
+    (rainbow-3 yellow-cooler)
+    (rainbow-4 blue)
+    (rainbow-5 cyan)
+    (rainbow-6 red-warmer)
+    (rainbow-7 green-cooler)
+    (rainbow-8 magenta-faint)))
+
+(defcustom faff-palette-overrides nil
+  "Overrides for `faff-palette'.
+
+Mirror the elements of the aforementioned palette, overriding
+their value.
+
+For overrides that are shared across all Modus-derived themes,
+refer to `modus-themes-common-palette-overrides'."
+  :group 'modus-themes
+  :package-version '(faff-theme . "4.0")
+  :type '(repeat (list symbol (choice symbol string))))
+
+(defconst faff-custom-faces
+  '(;; Magit boxed refs
+    `(magit-branch-local ((,c :background ,bg-yellow-intense :box (:line-width 1 :color ,border))))
+    `(magit-branch-current ((,c :inherit magit-branch-local :background ,bg-green-intense :weight bold)))
+    `(magit-branch-remote ((,c :background ,bg-inactive :foreground ,green-cooler :box (:line-width 1 :color ,border))))
+    `(magit-section-heading ((,c :inherit modus-themes-bold :box (:line-width 1 :color ,border))))
+    `(magit-tag ((,c :background ,bg-inactive :foreground ,yellow :box (:line-width 1 :color ,fg-dim))))
+    `(magit-refname ((,c :foreground ,fg-dim :box (:line-width 2 :color ,border))))
+    `(magit-hash ((,c :foreground ,fg-dim)))
+    ;; Diff: add boxes to modus defaults
+    `(diff-file-header ((,c :inherit modus-themes-bold :box (:line-width 2 :color ,border))))
+    `(diff-hunk-header ((,c :inherit modus-themes-bold :background ,bg-inactive :box (:line-width 2 :color ,border))))
+    ;; Org agenda boxed headers
+    `(org-agenda-date ((,c :inherit org-agenda-structure :background ,bg-inactive :box (:line-width 1 :color ,border))))
+    `(org-agenda-structure ((,c :background ,bg-inactive :foreground ,blue :box (:line-width 1 :color ,border))))))
+
+(defconst faff-palette
+  (modus-themes-generate-palette
+   faff-palette-partial
+   nil
+   nil
+   faff-palette-mappings-partial))
+
+(modus-themes-theme
  'faff
- '(default ((t (:foreground "black" :background "cornsilk3"))))
- '(ansi-color-blue ((t (:background "blue4" :foreground "blue4"))))
- '(ansi-color-bright-blue ((t (:background "blue2" :foreground "blue2"))))
- '(ansi-color-bright-cyan ((t (:background "cyan1" :foreground "cyan1"))))
- '(ansi-color-bright-green ((t (:background "green3" :foreground "green3"))))
- '(ansi-color-bright-yellow ((t (:background "yellow1" :foreground "yellow1"))))
- '(ansi-color-cyan ((t (:background "cyan4" :foreground "cyan4"))))
- '(ansi-color-fast-blink ((t (:box (1 . -1)))))
- '(ansi-color-green ((t (:background "darkgreen" :foreground "darkgreen"))))
- '(ansi-color-magenta ((t (:background "magenta4" :foreground "magenta4"))))
- '(ansi-color-slow-blink ((t (:box (1 . -1)))))
- '(ansi-color-yellow ((t (:background "yellow4" :foreground "yellow4"))))
- '(ansi-color-faint ((t (:foreground "gray50"))))
- '(bookmark-face ((t (:background "cornsilk3" :foreground "DarkOrange1"))))
- '(breakpoint-disabled ((t (:foreground "grey40"))))
- '(eglot-highlight-symbol-face ((t (:background "cornsilk2" :inherit bold))))
- '(eshell-ls-archive ((t (:foreground "Orchid4" :weight bold))))
- '(eshell-ls-backup ((t (:foreground "OrangeRed4"))))
- '(eshell-ls-clutter ((t (:foreground "OrangeRed4" :weight bold))))
- '(eshell-ls-executable ((t (:foreground "DarkGreen" :weight bold))))
- '(eshell-ls-product ((t (:foreground "OrangeRed4"))))
- '(eshell-ls-special ((t (:foreground "Magenta4" :weight bold))))
- '(eshell-prompt ((t (:background "#ddd8bd"))))
- '(match ((t (:background "yellow2"))))
- '(cursor ((t (:background "red3"))))
- '(variable-pitch ((t (:family "Sans Serif"))))
- '(escape-glyph ((((background dark)) (:foreground "cyan")) (((type pc)) (:foreground "magenta")) (t (:foreground "brown"))))
- '(minibuffer-prompt ((((background dark)) (:foreground "cyan")) (((type pc)) (:foreground "magenta")) (t (:foreground "medium blue"))))
- '(highlight ((t (:background "white"))))
- '(highlight-indentation-face ((t (:background "#d4ceb7"))))
- '(highlight-symbol-face ((t (:background "cornsilk2"))))
- '(shadow ((t (:foreground "cornsilk4"))))
- '(secondary-selection ((((class color) (min-colors 88) (background light)) (:background "yellow1")) (((class color) (min-colors 88) (background dark)) (:background "SkyBlue4")) (((class color) (min-colors 16) (background light)) (:background "yellow")) (((class color) (min-colors 16) (background dark)) (:background "SkyBlue4")) (((class color) (min-colors 8)) (:foreground "black" :background "cyan")) (t (:inverse-video t))))
- '(trailing-whitespace ((t (:background "cornsilk2"))))
- '(corfu-border ((t (:background "cornsilk4"))))
- '(corfu-current ((t (:background "cornsilk2"))))
- '(corfu-default ((t (:background "cornsilk3"))))
- '(corfu-popupinfo ((t (:inherit corfu-default :height 0.9))))
- '(emms-playlist-selected-face ((t (:background "cornsilk2" :foreground "black"))))
- '(emms-playlist-track-face ((t (:foreground "red4"))))
- '(erc-notice-face ((t (:foreground "cornsilk4"))))
- '(erc-timestamp-face ((t (:foreground "white" :weight bold))))
- '(font-lock-builtin-face ((t (:foreground "darkslateblue"))))
- '(font-lock-comment-face ((t (:foreground "firebrick4"))))
- '(font-lock-constant-face ((t (:foreground "deepskyblue4"))))
- '(font-lock-doc-face ((t (:inherit font-lock-comment-face))))
- '(font-lock-function-name-face ((t (:foreground "midnightblue"))))
- '(font-lock-keyword-face ((t (:weight bold))))
- '(font-lock-negation-char-face ((t (:background "cornsilk2"))))
- '(font-lock-property-use-face ((t nil)))
- '(font-lock-regexp-grouping-backslash ((t (:inherit (bold)))))
- '(font-lock-regexp-grouping-construct ((t (:inherit (bold)))))
- '(font-lock-string-face ((t (:foreground "darkgreen"))))
- '(font-lock-type-face ((t (:foreground "#004000" :weight bold))))
- '(font-lock-variable-name-face ((t (:foreground "#502010"))))
- '(font-lock-variable-use-face ((t nil)))
- '(button ((t (:inherit (link)))))
- '(link ((t (:foreground "RoyalBlue4" :underline t))))
- '(ein:cell-input-area ((t (:background "cornsilk2"))) t)
- '(fill-column-indicator ((t (:inherit shadow :foreground "#d5d0b8"))))
- '(fringe ((t (:inherit default :background "cornsilk3"))))
- '(header-line ((t (:background "#ddd8bd" :box (:line-width (1 . 1) :color "#ddd8bd" :style released-button)))))
- '(js2-external-variable ((t (:foreground "orange3"))))
- '(js2-function-call ((t (:inherit font-lock-function-name-face))))
- '(js2-jsdoc-type ((t (:inherit font-lock-type-face))))
- '(js2-jsdoc-value ((t (:inherit font-lock-variable-name-face)))) '(dired-subtree-depth-1-face ((t (:background "cornsilk2"))))
- '(js2-object-property ((t (:inherit font-lock-variable-name-face))))
- '(tooltip ((t (:inherit nil :background "lightyellow" :foreground "black"))))
- '(mode-line ((t (:box nil :family "sans serif" :background "#aca895"))))
- '(mode-line-active ((t (:inherit mode-line :background "gold"))))
- '(mode-line-buffer-id ((t (:weight bold))))
- '(mode-line-emphasis ((t (:weight bold))))
- '(mode-line-inactive ((t (:inherit mode-line))))
- '(isearch ((((class color) (min-colors 88) (background light)) (:foreground "lightskyblue1" :background "magenta3")) (((class color) (min-colors 88) (background dark)) (:foreground "brown4" :background "palevioletred2")) (((class color) (min-colors 16)) (:foreground "cyan1" :background "magenta4")) (((class color) (min-colors 8)) (:foreground "cyan1" :background "magenta4")) (t (:inverse-video t))))
- '(isearch-fail ((((class color) (min-colors 88) (background light)) (:background "RosyBrown1")) (((class color) (min-colors 88) (background dark)) (:background "red4")) (((class color) (min-colors 16)) (:background "red")) (((class color) (min-colors 8)) (:background "red")) (((class color grayscale)) (:foreground "grey")) (t (:inverse-video t))))
- '(lazy-highlight ((((class color) (min-colors 88) (background light)) (:background "paleturquoise")) (((class color) (min-colors 88) (background dark)) (:background "paleturquoise4")) (((class color) (min-colors 16)) (:background "turquoise3")) (((class color) (min-colors 8)) (:background "turquoise3")) (t (:underline (:color foreground-color :style line)))))
- '(match ((((class color) (min-colors 88) (background light)) (:background "yellow1")) (((class color) (min-colors 88) (background dark)) (:background "RoyalBlue3")) (((class color) (min-colors 8) (background light)) (:foreground "black" :background "yellow")) (((class color) (min-colors 8) (background dark)) (:foreground "white" :background "blue")) (((type tty) (class mono)) (:inverse-video t)) (t (:background "gray"))))
- '(next-error ((t (:inherit (region)))))
- '(query-replace ((t (:inherit (isearch)))))
- '(calendar-today ((t (:background "yellow1" :underline t))))
- '(custom-button ((t (:background "cornsilk2" :foreground "black" :box (:line-width (2 . 2) :style released-button)))))
- '(custom-button-mouse ((t (:background "cornsilk1" :foreground "black" :box (:line-width (2 . 2) :style released-button)))))
- '(custom-button-pressed ((t (:background "cornsilk2" :foreground "black" :box (:line-width (2 . 2) :style pressed-button)))))
- '(diff-added ((t (:inherit diff-changed :foreground "green4"))))
- '(diff-file-header ((t (:background "grey80" :box (:line-width 2 :color "grey80") :weight bold))))
- '(diff-header ((t (:background "grey80" :box (:line-width 2 :color "grey80")))))
- '(diff-hunk-header ((t (:inherit diff-header :box (:line-width 2 :color "grey80")))))
- '(diff-removed ((t (:foreground "red4"))))
- '(diff-refine-removed ((t (:inherit diff-refine-changed :background "#ffbbbb"))))
- '(dired-async-mode-message ((t (:foreground "red4"))))
- '(dired-directory ((t (:inherit font-lock-keyword-face))))
- '(dired-filetype-compress ((t (:foreground "Orchid"))))
- '(dired-filetype-execute ((t (:foreground "green4" :weight bold))))
- '(dired-filetype-omit ((t (:foreground "cornsilk4"))))
- '(dired-filetype-plain ((t (:foreground "SeaGreen"))))
- '(dired-filetype-source ((t (:foreground "red4" :weight normal))))
- '(dired-filetype-video ((t (:foreground "brown"))))
- '(flymake-note ((t (:underline (:color "green yellow" :style wave)))))
- '(flymake-warning ((t (:background "gray"))))
- '(dired-filetype-js ((t (:foreground "goldenrod4"))))
- '(dired-filetype-program ((t (:foreground "green4"))))
- '(dired-subtree-depth-2-face ((t (:background "cornsilk1"))))
- '(dired-subtree-depth-3-face ((t (:background "white"))))
- '(dired-subtree-depth-4-face ((t (:background "cornsilk2"))))
- '(dired-subtree-depth-5-face ((t (:background "cornsilk1"))))
- '(dired-subtree-depth-6-face ((t (:background "white")))) '(flymake-warnline ((t (:background "LightBlue3"))))
- '(elisp-shorthand-font-lock-face ((t (:inherit font-lock-keyword-face :foreground "cyan4"))))
- '(error ((t (:foreground "red3" :weight bold))))
- '(go-test--ok-face ((t (:foreground "green4"))))
- '(go-test--standard-face ((t (:weight bold))))
- '(hi-green-b ((t (:foreground "green4" :weight bold))))
- '(hl-line ((t (:extend t :background "#ddd8bd"))))
- '(hl-line-face ((t (:extend t :background "#ddd8bd"))))
- '(jabber-activity-face ((t (:background "green1"))))
- '(jabber-chat-error ((t (:background "pink"))))
- '(jabber-chat-prompt-system ((t (:foreground "green3" :weight bold))))
- '(jabber-chat-text-local ((t (:foreground "red4"))))
- '(jabber-title-large ((t (:weight bold :height 2.0 :width expanded))))
- '(jabber-title-medium ((t (:background "#ffb" :box (:line-width 2 :color "grey75" :style released-button) :weight bold :height 1.2 :width expanded))))
- '(kubernetes-namespace ((t (:foreground "Goldenrod4"))))
- '(lsp-face-highlight-read ((t (:background "cornsilk2"))))
- '(lsp-face-highlight-textual ((t (:background "cornsilk2"))))
- '(lsp-face-highlight-write ((t (:background "palegreen1"))))
- '(lsp-headerline-breadcrumb-symbols-face ((t (:inherit font-lock-doc-face))))
- '(lsp-ui-doc-background ((t (:background "cornsilk2"))))
- '(lsp-ui-sideline-current-symbol ((t (:inherit lsp-ui-sideline-symbol :box (:line-width 1 :color "cornsilk4") :weight bold))))
- '(lsp-ui-sideline-symbol ((t (:foreground "cornsilk2"))))
- '(lsp-ui-sideline-symbol-info ((t (:foreground "gray60" :slant italic))))
- '(helm-M-x-key ((t (:foreground "orange4" :underline t))))
- '(helm-ff-executable ((t (:foreground "darkgreen" :weight bold))))
- '(helm-ff-symlink ((t (:foreground "orange4"))))
- '(helm-grep-lineno ((t (:foreground "orange4"))))
- '(helm-source-header ((t (:background "cornsilk2" :foreground "black" :box (:line-width 1 :color "grey75" :style pressed-button) :weight normal :height 1.0 :family "Sans Serif"))))
- '(hydra-face-pink ((t (:foreground "deeppink" :weight bold))))
- '(Info-quoted ((t (:inherit fixed-pitch :background "#ddd8bd" :height 0.875))))
- '(magit-branch ((t (:inherit magit-header :background "yellow" :box (:line-width 1 :color "grey75" :style released-button)))))
- '(magit-branch-current ((t (:inherit magit-branch-local :background "green1" :weight bold))))
- '(magit-branch-local ((t (:background "yellow" :box (:line-width 1 :color "black")))))
- '(magit-branch-remote ((t (:background "cornsilk2" :foreground "DarkOliveGreen4" :box (:line-width 1 :color "cornsilk4")))))
- '(magit-diff-add ((t (:inherit diff-added))))
- '(magit-diff-del ((t (:inherit diff-removed))))
- '(magit-diff-none ((t (:inherit diff-context))))
- '(magit-header ((t (:inherit header-line :background "white"))))
- '(magit-item-highlight ((t (:inherit highlight))))
- '(magit-reflog-commit ((t (:foreground "darkgreen"))))
- '(magit-reflog-rebase ((t (:foreground "magenta3"))))
- '(magit-reflog-reset ((t (:foreground "red3"))))
- '(magit-refname ((t (:foreground "grey30" :box (:line-width 2 :color "grey75")))))
- '(magit-section-heading ((t (:background "cornsilk2" :box (:line-width 1 :color "grey75" :style released-button) :weight bold))))
- '(magit-section-title ((t (:inherit magit-header :box (:line-width 1 :color "grey75" :style released-button)))))
- '(magit-section-highlight ((t (:extend t :background "#ddd8bd"))))
- '(magit-signature-good ((t (:foreground "darkgreen"))))
- '(magit-tag ((t (:background "cornsilk2" :foreground "Goldenrod4" :box (:line-width 1 :color "gray25")))))
- '(markdown-code-face ((t (:inherit default :background "cornsilk2"))))
- '(menu ((((type x-toolkit)) (:background "gray92"))))
- '(mmm-default-submode-face ((t (:background "#ddd8bd"))))
- '(org-agenda-date ((t (:inherit org-agenda-structure :background "cornsilk1" :box (:line-width 1 :color "grey75" :style pressed-button) :height 1.0))))
- '(org-agenda-date-today ((t (:inherit org-agenda-date :slant italic :weight bold :height 1.0))))
- '(org-agenda-dimmed-todo-face ((t (:background "yellow3" :foreground "black"))))
- '(org-agenda-done ((((class color) (min-colors 16) (background light)) (:foreground "#9b9"))))
- '(org-agenda-restriction-lock ((t (:background "cornsilk1"))))
- '(org-agenda-structure ((t (:background "cornsilk1" :foreground "Blue3" :box (:line-width 1 :color "grey75" :style pressed-button)))))
- '(org-block ((t (:inherit org-verbatim :extend t))))
- '(org-column ((t (:background "cornsilk1" :strike-through nil :underline nil :slant normal :weight normal))))
- '(org-date ((t (:color "grey75" :style released-button))))
- '(org-hide ((((background light)) (:foreground "cornsilk2"))))
- '(org-meta-line ((t (:inherit fixed-pitch :background "cornsilk3" :foreground "cornsilk4"))))
- '(org-table ((t (:inherit org-block :foreground "Blue1"))))
- '(org-verbatim ((t (:inherit shadow :extend t :background "cornsilk2"))))
- '(outline-1 ((t (:weight bold))))
- '(outline-2 ((t (:foreground "dark red" :weight bold))))
- '(outline-3 ((t (:foreground "purple4" :weight normal))))
- '(outline-4 ((t (:inherit font-lock-variable-name-face))))
- '(powerline-active1 ((t (:inherit mode-line :background "gold4"))))
- '(powerline-active2 ((t (:inherit mode-line :background "gold3"))))
- '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "grey11" :foreground "grey45"))))
- '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "grey20" :foreground "grey55"))))
- '(region ((t (:extend t :background "cornsilk1"))))
- '(rjsx-tag ((t (:inherit font-lock-keyword-face))))
- '(rjsx-tag-bracket-face ((t (:inherit font-lock-keyword-face))))
- '(rst-level-1 ((t (:background "grey85" :weight bold))))
- '(rst-literal ((t (:inherit shadow :extend t :background "cornsilk2"))))
- '(separator-line ((t (:background "cornsilk4" :height 0.1))))
- '(scroll-bar ((t (:background "#aca895" :foreground "cornsilk3"))))
- '(sh-heredoc ((t (:foreground "tan4"))))
- '(sh-quoted-exec ((t (:foreground "magenta4"))))
- '(shadow ((t (:foreground "cornsilk4"))))
- '(success ((t (:foreground "darkgreen" :weight bold))))
- '(symbol-overlay-default-face ((t (:background "cornsilk1"))))
- '(symbol-overlay-face-1 ((t (:background "yellow" :foreground "black"))))
- '(symbol-overlay-face-3 ((t (:background "light blue" :foreground "black"))))
- '(symbol-overlay-face-4 ((t (:background "orchid1" :foreground "black"))))
- '(symbol-overlay-face-5 ((t (:background "red1" :foreground "black"))))
- '(tab-bar ((t (:background "#aca895" :height 0.9))))
- '(tab-bar-tab-inactive ((t (:inherit (variable-pitch tab-bar) :foreground "grey30"))))
- '(tab-bar-tab ((t (:inherit (tab-bar-tab-inactive) :background "cornsilk3" :foreground "black"))))
- '(tab-line ((t (:background "#aca895" :height 0.9))))
- '(tab-line-tab ((t (:inherit (variable-pitch tab-line)))))
- '(tab-line-tab-inactive ((t (:inherit (variable-pitch tab-line)))))
- '(tab-line-tab-current ((t (:inherit (tab-line-tab-inactive) :background "cornsilk3"))))
- '(tab-line-highlight ((t (:inherit (tab-line bold)))))
- '(term-color-green ((t (:background "darkgreen" :foreground "darkgreen"))))
- '(term-color-cyan ((t (:background "cyan4" :foreground "cyan4"))))
- '(term-color-magenta ((t (:background "magenta4" :foreground "magenta4"))))
- '(term-color-yellow ((t (:background "yellow" :foreground "yellow"))))
- '(tool-bar ((default (:foreground "black" :box (:line-width 1 :style released-button))) (((type x w32 mac) (class color)) (:background "grey92"))))
- '(treemacs-directory-collapsed-face ((t (:inherit treemacs-directory-face :foreground "gray30"))))
- '(treemacs-directory-face ((t (:weight bold))))
- '(treemacs-tags-face ((t (:inherit font-lock-function-name-face))))
- '(vertico-current ((t (:extend t :background "cornsilk2" :box (:line-width (1 . 1) :color "cornsilk4" :style flat-button)))))
- '(web-mode-doctype-face ((t (:foreground "Grey35"))))
- '(web-mode-html-attr-name-face ((t (:foreground "gray10"))))
- '(web-mode-html-tag-face ((t (:weight bold))))
- '(warning ((t (:foreground "DarkOrange3" :weight bold))))
- '(whitespace-hspace ((t (:background "LemonChiffon1"))))
- '(whitespace-line ((t (:background "yellow2"))))
- '(whitespace-newline ((t (:background "cornsilk2" :foreground "cornsilk4" :weight normal))))
- '(whitespace-space ((t (:foreground "cornsilk2"))))
- '(widget-field ((t (:extend t :background "cornsilk2" :box (:line-width (1 . -1) :color "gray80")))))
- '(window-divider ((t (:foreground "cornsilk3"))))
- '(window-divider-first-pixel ((t (:foreground "cornsilk2"))))
- '(window-divider-last-pixel ((t (:foreground "cornsilk4")))))
+ nil
+ "Light cornsilk theme with warm, earthy colors."
+ 'light
+ 'faff-palette
+ nil
+ 'faff-palette-overrides
+ 'faff-custom-faces)
 
-(custom-theme-set-variables
- 'faff
- ;; lsp-diagnostics-attributes: the default for `unnecessary', is gray, which is
- ;; nearly invisible on cornsilk3.
- '(lsp-diagnostics-attributes
-   '((unnecessary :foreground "cornsilk4")
-     (deprecated :strike-through t))))
+;; Scroll bar: modus-themes sets scroll-bar with display spec (class color),
+;; but Emacs only updates frame scroll-bar-background/foreground for spec `t'.
+;; Override it after the theme is fully constructed, using palette colors.
+(let* ((settings (get 'faff 'theme-settings))
+       (bg (cadr (assq 'bg-alt faff-palette-partial)))
+       (fg (cadr (assq 'bg-main faff-palette-partial))))
+  (setf (get 'faff 'theme-settings)
+        (seq-remove (lambda (s) (and (eq (car s) 'theme-face)
+                                     (eq (nth 1 s) 'scroll-bar)))
+                    settings))
+  (custom-theme-set-faces
+   'faff
+   `(scroll-bar ((t (:background ,bg :foreground ,fg))))))
 
-;;;###autoload
-(when load-file-name
-  (add-to-list 'custom-theme-load-path
-               (file-name-as-directory (file-name-directory load-file-name))))
-
-(provide-theme 'faff)
 ;;; faff-theme.el ends here
