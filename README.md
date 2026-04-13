@@ -21,9 +21,14 @@ Features:
 
 ## Installation
 
-Available on Melpa as `faff-theme` or from this repo, then:
 
-```emacs-lisp
+``` elisp
+;; available from melpa
+(use-package faff-theme)
+;; or github
+(use-package faff-theme
+      :vc (:url "https://github.com/WJCFerguson/emacs-faff-theme.git"))
+;; then load
 (load-theme 'faff t)
 ```
 
@@ -34,7 +39,7 @@ appear as plain text
 
 To add variable highlighting, use palette overrides before loading the theme:
 
-```emacs-lisp
+``` elisp
 (setq faff-palette-overrides
       '((variable red-faint)
         (variable-use cyan-faint)))
