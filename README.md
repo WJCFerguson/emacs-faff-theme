@@ -15,7 +15,7 @@ Features:
 - Works with `modus-themes-bold-constructs`, `modus-themes-variable-pitch-ui`,
   and other modus-themes options
 
-![Screenshot](faff-theme.png)
+![Screenshot](faff-theme.gif)
 
 (Screenshot shows `modus-themes-bold-constructs` set, per the author's preference, using the beautiful Ubuntu Mono)
 
