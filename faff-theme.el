@@ -322,18 +322,4 @@ refer to `modus-themes-common-palette-overrides'."
  'faff-palette-overrides
  'faff-custom-faces)
 
-;; Scroll bar: modus-themes sets scroll-bar with display spec (class color),
-;; but Emacs only updates frame scroll-bar-background/foreground for spec `t'.
-;; Override it after the theme is fully constructed, using palette colors.
-(let* ((settings (get 'faff 'theme-settings))
-       (bg (cadr (assq 'bg-alt faff-palette-partial)))
-       (fg (cadr (assq 'bg-main faff-palette-partial))))
-  (setf (get 'faff 'theme-settings)
-        (seq-remove (lambda (s) (and (eq (car s) 'theme-face)
-                                     (eq (nth 1 s) 'scroll-bar)))
-                    settings))
-  (custom-theme-set-faces
-   'faff
-   `(scroll-bar ((t (:background ,bg :foreground ,fg))))))
-
 ;;; faff-theme.el ends here
