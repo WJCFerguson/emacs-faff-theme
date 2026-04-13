@@ -303,7 +303,16 @@ refer to `modus-themes-common-palette-overrides'."
     `(diff-hunk-header ((,c :inherit modus-themes-bold :background ,bg-inactive :box (:line-width 2 :color ,border))))
     ;; Org agenda boxed headers
     `(org-agenda-date ((,c :inherit org-agenda-structure :background ,bg-inactive :box (:line-width 1 :color ,border))))
-    `(org-agenda-structure ((,c :background ,bg-inactive :foreground ,blue :box (:line-width 1 :color ,border))))))
+    `(org-agenda-structure ((,c :background ,bg-inactive :foreground ,blue :box (:line-width 1 :color ,border))))
+    ;; dired-filetype
+    `(dired-filetype-compress ((t :foreground ,magenta)))
+    `(dired-filetype-execute ((t :foreground ,green :weight bold)))
+    `(dired-filetype-omit ((t :foreground ,fg-dim)))
+    `(dired-filetype-plain ((t :foreground ,green-cooler)))
+    `(dired-filetype-source ((t :foreground ,red)))
+    `(dired-filetype-video ((t :foreground ,yellow-warmer)))
+    `(dired-filetype-js ((t :foreground ,yellow)))
+    `(dired-filetype-program ((t :foreground ,green)))))
 
 (defconst faff-palette
   (modus-themes-generate-palette
