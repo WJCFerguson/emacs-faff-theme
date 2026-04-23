@@ -143,8 +143,8 @@
     (bg-region "#e0dcc8")))
 
 (defconst faff-palette-mappings-partial
-  '((err red-warmer)
-    (warning yellow-warmer)
+  '((err red-cooler)
+    (warning yellow-faint)
     (info green)
 
     (fg-link blue-warmer)
