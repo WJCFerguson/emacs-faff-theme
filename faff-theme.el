@@ -4,7 +4,7 @@
 
 ;; Author: James Ferguson <(concat "wjcferguson" at-sign "gmail.com")>
 ;; URL: https://github.com/WJCFerguson/emacs-faff-theme
-;; Version: 4.0
+;; Version: 4.0.1
 ;; Package-Requires: ((emacs "28.1") (modus-themes "5.0.0"))
 ;; Keywords: faces, theme
 
@@ -143,8 +143,8 @@
     (bg-region "#e0dcc8")))
 
 (defconst faff-palette-mappings-partial
-  '((err red-cooler)
-    (warning yellow-faint)
+  '((err red-warmer)
+    (warning yellow-warmer)
     (info green)
 
     (fg-link blue-warmer)
