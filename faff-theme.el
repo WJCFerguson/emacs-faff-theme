@@ -4,7 +4,7 @@
 
 ;; Author: James Ferguson <(concat "wjcferguson" at-sign "gmail.com")>
 ;; URL: https://github.com/WJCFerguson/emacs-faff-theme
-;; Version: 4.0.3
+;; Version: 4.0.4
 ;; Package-Requires: ((emacs "28.1") (modus-themes "5.0.0"))
 ;; Keywords: faces, theme
 
@@ -312,7 +312,9 @@ refer to `modus-themes-common-palette-overrides'."
     `(dired-filetype-source ((t :foreground ,red)))
     `(dired-filetype-video ((t :foreground ,yellow-warmer)))
     `(dired-filetype-js ((t :foreground ,yellow)))
-    `(dired-filetype-program ((t :foreground ,green)))))
+    `(dired-filetype-program ((t :foreground ,green)))
+    `(fill-column-indicator ((t :height 1 :background ,bg-dim :foreground ,bg-dim)))
+    ))
 
 (defconst faff-palette
   (modus-themes-generate-palette
