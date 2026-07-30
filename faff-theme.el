@@ -4,7 +4,7 @@
 
 ;; Author: James Ferguson <(concat "wjcferguson" at-sign "gmail.com")>
 ;; URL: https://github.com/WJCFerguson/emacs-faff-theme
-;; Version: 4.0.4
+;; Version: 4.0.5
 ;; Package-Requires: ((emacs "28.1") (modus-themes "5.0.0"))
 ;; Keywords: faces, theme
 
@@ -332,5 +332,7 @@ refer to `modus-themes-common-palette-overrides'."
  nil
  'faff-palette-overrides
  'faff-custom-faces)
+
+(provide 'faff-theme)
 
 ;;; faff-theme.el ends here
