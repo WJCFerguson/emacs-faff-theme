@@ -4,7 +4,7 @@
 
 ;; Author: James Ferguson <(concat "wjcferguson" at-sign "gmail.com")>
 ;; URL: https://github.com/WJCFerguson/emacs-faff-theme
-;; Version: 4.0.5
+;; Version: 4.0.6
 ;; Package-Requires: ((emacs "28.1") (modus-themes "5.0.0"))
 ;; Keywords: faces, theme
 
@@ -305,6 +305,7 @@ refer to `modus-themes-common-palette-overrides'."
     `(org-agenda-date ((,c :inherit org-agenda-structure :background ,bg-inactive :box (:line-width 1 :color ,border))))
     `(org-agenda-structure ((,c :background ,bg-inactive :foreground ,blue :box (:line-width 1 :color ,border))))
     ;; dired-filetype
+    `(dired-directory ((t :weight bold)))
     `(dired-filetype-compress ((t :foreground ,magenta)))
     `(dired-filetype-execute ((t :foreground ,green :weight bold)))
     `(dired-filetype-omit ((t :foreground ,fg-dim)))
